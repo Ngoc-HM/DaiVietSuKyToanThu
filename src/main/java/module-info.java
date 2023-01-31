@@ -1,5 +1,5 @@
 module com.example.ui_new {
-    requires javafx.controls;
+    requires transitive javafx.controls;
     requires javafx.fxml;
     requires javafx.media;
 
