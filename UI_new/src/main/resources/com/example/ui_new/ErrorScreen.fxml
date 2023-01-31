@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="768.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ui_new.ErrorScreen">
+    <children>
+        <Text layoutX="146.0" layoutY="312.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Xin lỗi tính năng này chưa phát triển" textAlignment="CENTER" wrappingWidth="298.4541015625">
+            <font>
+                <Font size="34.0" />
+            </font></Text>
+        <ImageView fitHeight="590.0" fitWidth="765.0" layoutX="538.0" layoutY="173.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../../assets/image/xinloi.jpg" />
+            </image>
+        </ImageView>
+        <Button fx:id="GoBack" layoutX="153.0" layoutY="393.0" mnemonicParsing="false" onAction="#GoBackAction" prefHeight="31.0" prefWidth="307.0" text="Go Back" />
+    </children>
+</AnchorPane>
