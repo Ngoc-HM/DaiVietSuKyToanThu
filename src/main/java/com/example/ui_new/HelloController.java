@@ -1,6 +1,5 @@
 package com.example.ui_new;
 
-import com.example.ui_new.ErrorScreen;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -12,17 +11,10 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
-import javafx.scene.control.Label;
-import javafx.scene.control.Menu;
-import javafx.scene.media.Media;
-import javafx.scene.media.MediaPlayer;
 import javafx.stage.Stage;
-
 
 import java.io.IOException;
 import java.net.URL;
-import java.nio.file.Paths;
-import java.util.Objects;
 import java.util.ResourceBundle;
 
 public class HelloController implements Initializable {
@@ -85,8 +77,8 @@ public class HelloController implements Initializable {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(getClass().getResource("ErrorScreen.fxml"));
-        Parent ErrorScreenDarkMode = loader.load();
-        Scene scene = new Scene(ErrorScreenDarkMode);
+        Parent denvang = loader.load();
+        Scene scene = new Scene(denvang);
         ErrorScreen errorScreen = loader.getController();
         stage.setScene(scene);
         stage.show();
@@ -97,13 +89,19 @@ public class HelloController implements Initializable {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(getClass().getResource("ErrorScreen.fxml"));
-        Parent ErrorScreenDarkMode = loader.load();
-        Scene scene = new Scene(ErrorScreenDarkMode);
+        Parent tatnhac = loader.load();
+        Scene scene = new Scene(tatnhac);
         ErrorScreen errorScreen = loader.getController();
         stage.setScene(scene);
         stage.show();
     }
-
-
-
+    @FXML
+    public Button NextWeb;
+    public void NextWebAction(ActionEvent event)  throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("WebView.fxml"));
+        Scene scene = new Scene(root);
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.show();
+    }
 }
