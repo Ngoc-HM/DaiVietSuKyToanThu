@@ -37,7 +37,7 @@
             <Button fx:id="TraCuuLeHoi" mnemonicParsing="false" onAction="#TraCuuLeHoiAction" prefHeight="65.0" prefWidth="307.0" text="Tra Cứu Lễ Hội" />
             <Button fx:id="SuKienLichSuVietNam" mnemonicParsing="false" onAction="#SuKienLichSuVietNamAction" prefHeight="65.0" prefWidth="307.0" text="Sự Kiện Lịch Sử Việt Nam " />
             <Button fx:id="DiaDiemDiTich" mnemonicParsing="false" onAction="#DiaDiemDiTichAction" prefHeight="65.0" prefWidth="307.0" text="Địa Điểm Di tích " />
-            <Button mnemonicParsing="false" prefHeight="65.0" prefWidth="307.0" text="Truy cập Web">
+            <Button fx:id="NextWeb" mnemonicParsing="false" onAction="#NextWebAction" prefHeight="65.0" prefWidth="307.0" text="Truy cập Web">
 
             </Button>
          </children>
