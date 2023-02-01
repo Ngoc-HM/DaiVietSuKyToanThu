@@ -9,10 +9,9 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
-
 import java.io.IOException;
 
-public class ErrorScreen {
+public class WebView {
     @FXML
     public Button GoBack;
     public void GoBackAction(ActionEvent event) {
