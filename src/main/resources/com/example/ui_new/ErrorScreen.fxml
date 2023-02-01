@@ -9,6 +9,7 @@
 
 <AnchorPane prefHeight="768.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ui_new.ErrorScreen">
     <children>
+
         <Text layoutX="146.0" layoutY="312.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Xin lỗi tính năng này chưa phát triển" textAlignment="CENTER" wrappingWidth="298.4541015625">
             <font>
                 <Font size="34.0" />

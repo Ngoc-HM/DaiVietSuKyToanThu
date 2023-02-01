@@ -15,6 +15,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.Objects;
 import java.util.ResourceBundle;
 
 public class HelloController implements Initializable {
@@ -98,10 +99,21 @@ public class HelloController implements Initializable {
     @FXML
     public Button NextWeb;
     public void NextWebAction(ActionEvent event)  throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("WebView.fxml"));
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        FXMLLoader loader = new FXMLLoader();
+
+        loader.setLocation(getClass().getResource("WebView.fxml"));
+        Parent nextweb = loader.load();
+        Scene scene = new Scene(nextweb);
+        WebView webView = loader.getController();
+        stage.setScene(scene);
+        stage.show();
+      /*  Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("WebView.fxml")));
         Scene scene = new Scene(root);
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         stage.setScene(scene);
         stage.show();
+
+       */
     }
 }
