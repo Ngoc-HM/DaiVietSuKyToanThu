@@ -1,0 +1,192 @@
+[
+   {
+      "PeriodName": "Thời kỳ Bắc thuộc lần thứ nhất",
+      "PeriodTime": "111 TCN–40",
+      "PeriodPredecessor": "Nam Việt",
+      "PeriodSuccessor": "Hai Bà Trưng",
+      "Capital": "Giao Chỉ",
+      "FirstEmperor": "111-87 TCN Hán Vũ Đế (đầu tiên)",
+      "LastEmperor": "40 Hán Quang Vũ Đế (cuối cùng)",
+      "Religion": ""
+   },
+   {
+      "PeriodName": "Nhà Triệu",
+      "PeriodTime": "204 TCN–111 TCN",
+      "PeriodPredecessor": "Nhà Tần",
+      "PeriodSuccessor": "An Dương Vương",
+      "Capital": "Phiên Ngung",
+      "FirstEmperor": "204–137 TCN Vũ đế",
+      "LastEmperor": "Thừa tướng",
+      "Religion": "Đa thần giáo"
+   },
+   {
+      "PeriodName": "Thời kỳ Bắc thuộc lần thứ hai",
+      "PeriodTime": "43–544",
+      "PeriodPredecessor": "Hai Bà Trưng",
+      "PeriodSuccessor": "Nhà Tiền Lý",
+      "Capital": "Long Biên",
+      "FirstEmperor": "43-57 Hán Quang Vũ Đế (đầu tiên)",
+      "LastEmperor": "502–544 Lương Vũ Đế (cuối cùng)",
+      "Religion": ""
+   },
+   {
+      "PeriodName": "Nhà Tiền Lý",
+      "PeriodTime": "544–602",
+      "PeriodPredecessor": "Bắc thuộc lần 2",
+      "PeriodSuccessor": "Bắc thuộc lần 3",
+      "Capital": "Long Biên",
+      "FirstEmperor": "544–548 Lý Nam Đế (đầu tiên)",
+      "LastEmperor": "571-602 Lý Phật Tử (cuối cùng)",
+      "Religion": ""
+   },
+   {
+      "PeriodName": "Thời kỳ Bắc thuộc lần thứ ba",
+      "PeriodTime": "603–905 hoặc 939",
+      "PeriodPredecessor": "Nhà Tiền Lý",
+      "PeriodSuccessor": "Nhà Ngô",
+      "Capital": "Đại La",
+      "FirstEmperor": "602–604 Tùy Văn Đế (đầu tiên)",
+      "LastEmperor": "Tiết độ sứ",
+      "Religion": "Phật giáo"
+   },
+   {
+      "PeriodName": "Nhà Ngô",
+      "PeriodTime": "939–965",
+      "PeriodPredecessor": "Bắc thuộc lần 3",
+      "PeriodSuccessor": "Nhà Đinh",
+      "Capital": "Cổ Loa",
+      "FirstEmperor": "939-944 Ngô Quyền (đầu tiên)",
+      "LastEmperor": "965 Ngô Xương Xí (cuối cùng)",
+      "Religion": "Phật giáo, Đạo giáo, Cảnh giáo[1]"
+   },
+   {
+      "PeriodName": "Nhà Đinh",
+      "PeriodTime": "968–980",
+      "PeriodPredecessor": "Nhà Ngô",
+      "PeriodSuccessor": "Nhà Tiền Lê",
+      "Capital": "Hoa Lư",
+      "FirstEmperor": "968-979 Đinh Tiên Hoàng",
+      "LastEmperor": "979-980 Đinh Phế Đế",
+      "Religion": "Phật giáo, Đạo giáo,..."
+   },
+   {
+      "PeriodName": "Nhà Tiền Lê",
+      "PeriodTime": "980–1009",
+      "PeriodPredecessor": "Nhà Đinh",
+      "PeriodSuccessor": "Nhà Lý",
+      "Capital": "Hoa Lư",
+      "FirstEmperor": "980-1005 Lê Đại Hành",
+      "LastEmperor": "1005-1009 Lê Ngọa Triều",
+      "Religion": "Phật giáo, Đạo giáo,..."
+   },
+   {
+      "PeriodName": "Nhà Lý",
+      "PeriodTime": "1009–1225",
+      "PeriodPredecessor": "Nhà Tiền Lê",
+      "PeriodSuccessor": "Nhà Trần",
+      "Capital": "Hoa Lư (1009 - 1010) Thăng Long (1010 - 1225)",
+      "FirstEmperor": "1009-1028 Lý Thái Tổ (đầu tiên)",
+      "LastEmperor": "1224-1225 Lý Chiêu Hoàng (cuối cùng)",
+      "Religion": "Phật giáo"
+   },
+   {
+      "PeriodName": "Nhà Trần",
+      "PeriodTime": "1226–1400",
+      "PeriodPredecessor": "Nhà Lý",
+      "PeriodSuccessor": "Nhà Hồ",
+      "Capital": "Thăng Long Thiên Trường[1] Thanh Hoá (tạm thời)",
+      "FirstEmperor": "1226-1258 Trần Thái Tông (đầu tiên)",
+      "LastEmperor": "1398-1400 Trần Thiếu Đế (cuối cùng)",
+      "Religion": "Phật giáo, Đạo giáo, Tín ngưỡng Việt Nam"
+   },
+   {
+      "PeriodName": "Nhà Hồ",
+      "PeriodTime": "1400–1407",
+      "PeriodPredecessor": "Nhà Trần",
+      "PeriodSuccessor": "Bắc thuộc lần 4",
+      "Capital": "Tây Đô 20°4′B 105°36′Đ﻿ / ﻿20,067°B 105,6°Đ﻿ / 20.067; 105.600",
+      "FirstEmperor": "1400-1401 Hồ Quý Ly (đầu tiên)",
+      "LastEmperor": "1401-1407 Hồ Hán Thương (cuối cùng)",
+      "Religion": "Phật giáo, Đạo giáo, Tín ngưỡng Việt Nam"
+   },
+   {
+      "PeriodName": "Nhà Hậu Trần",
+      "PeriodTime": "1407–1414",
+      "PeriodPredecessor": "Kỷ thuộc Minh",
+      "PeriodSuccessor": "Kỷ thuộc Minh",
+      "Capital": "Mô Độ (1407 - 1409) Bình Than (1409 - 1414)",
+      "FirstEmperor": "Giản Định Đế lên ngôi tại Mộ Độ 1407",
+      "LastEmperor": "Trùng Quang Đế bị bắt tại Hóa Châu 1414",
+      "Religion": "Tam giáo quy nguyên"
+   },
+   {
+      "PeriodName": "Nhà Lê sơ",
+      "PeriodTime": "1428–1527",
+      "PeriodPredecessor": "Bắc thuộc lần 4",
+      "PeriodSuccessor": "Nhà Mạc",
+      "Capital": "Đông Kinh (東京 1428 - 1527)",
+      "FirstEmperor": "1428-1433 Lê Thái Tổ",
+      "LastEmperor": "1460-1497 Lê Thánh Tông",
+      "Religion": "Phật giáo, Nho giáo, Tín ngưỡng dân gian"
+   },
+   {
+      "PeriodName": "Nhà Lê trung hưng",
+      "PeriodTime": "1533–1789",
+      "PeriodPredecessor": "Nhà Mạc",
+      "PeriodSuccessor": "Nhà Lê sơ",
+      "Capital": "Vạn Lại (tạm thời) (1533–1597) Đông Kinh (1597–1789)",
+      "FirstEmperor": "1533–1548 Lê Trang Tông",
+      "LastEmperor": "1787–1789 Lê Chiêu Thống (cuối cùng)",
+      "Religion": "Nho giáo Phật giáo Đạo giáo Công giáo Tín ngưỡng dân gian"
+   },
+   {
+      "PeriodName": "Nhà Mạc",
+      "PeriodTime": "1527–1677",
+      "PeriodPredecessor": "Nhà Lê sơ",
+      "PeriodSuccessor": "Nhà Lê trung hưng",
+      "Capital": "Đông Kinh",
+      "FirstEmperor": "1527-1529 Thái Tổ",
+      "LastEmperor": "1638-1677 Mạc Kính Vũ",
+      "Religion": "Tam giáo quy nguyên"
+   },
+   {
+      "PeriodName": "Chúa Trịnh",
+      "PeriodTime": "1545–1787",
+      "PeriodPredecessor": "Nhà Mạc",
+      "PeriodSuccessor": "Nhà Tây Sơn",
+      "Capital": "Đông Kinh",
+      "FirstEmperor": "Trịnh Kiểm xưng Thái sư Lạng Quốc công 1545",
+      "LastEmperor": "Giải thể 1787",
+      "Religion": "Tam giáo đồng nguyên"
+   },
+   {
+      "PeriodName": "Chúa Nguyễn",
+      "PeriodTime": "1558–1777 1780-1802",
+      "PeriodPredecessor": "Nhà Lê trung hưng",
+      "PeriodSuccessor": "Nhà Tây Sơn",
+      "Capital": "Ái Tử-Trà Bát (1558-1626) Phước Yên-Bác Vọng (1626-1636, 1712-1738) Kim Long-Phú Xuân (1636-1712, 1738-1775) Hội An (1775-1777) Gia Định (1777, 1780-1783, 1788-1802)",
+      "FirstEmperor": "Nguyễn Hoàng vào trấn thủ vùng Thuận Hóa 1558",
+      "LastEmperor": "Giải thể 1777 1780-1802",
+      "Religion": "Tam giáo Ki-tô giáo"
+   },
+   {
+      "PeriodName": "Nhà Tây Sơn",
+      "PeriodTime": "1778–1802",
+      "PeriodPredecessor": "Lê Trung Hưng",
+      "PeriodSuccessor": "Chúa Trịnh",
+      "Capital": "Quy Nhơn (1778-1788) Phú Xuân (1788-1802) Phượng Hoàng Trung Đô (1788-1802)",
+      "FirstEmperor": "1778-1788 Nguyễn Nhạc",
+      "LastEmperor": "1792-1802 Nguyễn Quang Toản",
+      "Religion": "Phật giáo, Nho giáo, Công giáo, Tín ngưỡng dân gian"
+   },
+   {
+      "PeriodName": "Nhà Nguyễn",
+      "PeriodTime": "1802–1945",
+      "PeriodPredecessor": "Nhà Tây Sơn",
+      "PeriodSuccessor": "Chúa Nguyễn",
+      "Capital": "Phú Xuân (nay là Huế) 16°28′B 107°36′Đ﻿ / ﻿16,467°B 107,6°Đ﻿ / 16.467; 107.600",
+      "FirstEmperor": "1802–1820 (đầu) Gia Long",
+      "LastEmperor": "1926–1945 (cuối cùng) Bảo Đại",
+      "Religion": "Nho giáo, Phật giáo, Công giáo, Tín ngưỡng dân gian"
+   }
+]
