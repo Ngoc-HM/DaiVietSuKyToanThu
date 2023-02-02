@@ -13,13 +13,13 @@ import java.nio.file.Paths;
 public class HelloApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        // nào Build thì bỏ comment ra để phát nhạc
-         /*   Media media = new Media(Paths.get("src/main/resources/assets/music/HaoKhiVietNam.mp3").toUri().toString());
+        // Phát nhạc hào khí Việt Nam
+           Media media = new Media(Paths.get("src/main/resources/assets/music/HaoKhiVietNam.mp3").toUri().toString());
             MediaPlayer mediaPlayer = new MediaPlayer(media);
             mediaPlayer.setAutoPlay(true);
             mediaPlayer.setMute(false);
             mediaPlayer.play();
-*/
+        // chạy cửa sổ menu
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
 
