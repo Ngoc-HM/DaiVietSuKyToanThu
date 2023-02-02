@@ -18,7 +18,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class TrieuDaiLichSu implements Initializable {
+public class TrieuDaiLichSuData implements Initializable {
 
     @FXML
     public ComboBox<String> ListMusic;
@@ -124,7 +124,7 @@ public class TrieuDaiLichSu implements Initializable {
     public void GoBackAction(ActionEvent event) throws IOException {
         try {
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("hello-view.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("TrieuDaiLichSu.fxml"));
             Parent root1 = (Parent) fxmlLoader.load();
             stage.setTitle("Hello");
             stage.setScene(new Scene(root1));
@@ -139,17 +139,10 @@ public class TrieuDaiLichSu implements Initializable {
     @FXML
     public TextField Search;
     public void TimKiemAction(ActionEvent event) throws IOException {
-        try {
-            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("TrieuDaiLichSuData.fxml"));
-            Parent root1 = (Parent) fxmlLoader.load();
-            stage.setTitle("Hello");
-            stage.setScene(new Scene(root1));
-            stage.show();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        System.out.println(Search.getText());
     }
+
+
 
 
 }
