@@ -11,7 +11,9 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1300.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ui_new.TrieuDaiLichSuData">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1300.0"
+            style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.ui_new.TrieuDaiLichSuData">
 
    <children>
       <Accordion layoutX="151.0" layoutY="142.0" />
@@ -34,9 +36,9 @@
                   <Button fx:id="DenVang" mnemonicParsing="false" onAction="#DenVangAction" prefHeight="46.0" prefWidth="71.0" text="Đèn Vàng" />
                </children>
             </HBox>
-            <Button fx:id="Intro" mnemonicParsing="false" prefHeight="65.0" prefWidth="307.0" text="Giới Thiệu" />
+            <Button fx:id="Intro" mnemonicParsing="false" onAction="#IntrolAction" prefHeight="65.0" prefWidth="307.0" text="Giới Thiệu" />
             <Button fx:id="TrieuDaiLichSu" mnemonicParsing="false" onAction="#TrieuDaiLichSuAction" prefHeight="65.0" prefWidth="307.0" text="Triều Đại Lịch Sử" />
-            <Button fx:id="HuyenSuCacViVua" mnemonicParsing="false" onAction="#HuyenSuCacViVuaAction" prefHeight="65.0" prefWidth="307.0" text="Huyền Sử Vị Vua" />
+            <Button fx:id="HuyenSuCacViVua" mnemonicParsing="false" onAction="#HuyenSuCacViVuaAction" prefHeight="65.0" prefWidth="307.0" text="Huyền Sử Các Vị Vua" />
             <Button fx:id="TraCuuLeHoi" mnemonicParsing="false" onAction="#TraCuuLeHoiAction" prefHeight="65.0" prefWidth="307.0" text="Tra Cứu Lễ Hội" />
             <Button fx:id="SuKienLichSuVietNam" mnemonicParsing="false" onAction="#SuKienLichSuVietNamAction" prefHeight="65.0" prefWidth="307.0" text="Sự Kiện Lịch Sử Việt Nam " />
             <Button fx:id="DiaDiemDiTich" mnemonicParsing="false" onAction="#DiaDiemDiTichAction" prefHeight="65.0" prefWidth="307.0" text="Địa Điểm Di tích " />
@@ -142,6 +144,7 @@
                   <Font size="18.0" />
                </font>
             </Label>
-         </children></AnchorPane>
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>

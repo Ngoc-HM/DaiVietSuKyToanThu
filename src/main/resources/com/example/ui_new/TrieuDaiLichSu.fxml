@@ -35,14 +35,13 @@
                   <Button fx:id="DenVang" mnemonicParsing="false" onAction="#DenVangAction" prefHeight="46.0" prefWidth="71.0" text="Đèn Vàng" />
                </children>
             </HBox>
-            <Button fx:id="Intro" mnemonicParsing="false" prefHeight="65.0" prefWidth="307.0" text="Giới Thiệu" />
+            <Button fx:id="Intro" mnemonicParsing="false" onAction="#IntrolAction" prefHeight="65.0" prefWidth="307.0" text="Giới Thiệu" />
             <Button fx:id="TrieuDaiLichSu" mnemonicParsing="false" onAction="#TrieuDaiLichSuAction" prefHeight="65.0" prefWidth="307.0" text="Triều Đại Lịch Sử" />
-            <Button fx:id="HuyenSuCacViVua" mnemonicParsing="false" onAction="#HuyenSuCacViVuaAction" prefHeight="65.0" prefWidth="307.0" text="Huyền Sử Vị Vua" />
+            <Button fx:id="HuyenSuCacViVua" mnemonicParsing="false" onAction="#HuyenSuCacViVuaAction" prefHeight="65.0" prefWidth="307.0" text="Huyền Sử Các Vị Vua" />
             <Button fx:id="TraCuuLeHoi" mnemonicParsing="false" onAction="#TraCuuLeHoiAction" prefHeight="65.0" prefWidth="307.0" text="Tra Cứu Lễ Hội" />
             <Button fx:id="SuKienLichSuVietNam" mnemonicParsing="false" onAction="#SuKienLichSuVietNamAction" prefHeight="65.0" prefWidth="307.0" text="Sự Kiện Lịch Sử Việt Nam " />
             <Button fx:id="DiaDiemDiTich" mnemonicParsing="false" onAction="#DiaDiemDiTichAction" prefHeight="65.0" prefWidth="307.0" text="Địa Điểm Di tích " />
             <Button fx:id="NextWeb" mnemonicParsing="false" onAction="#NextWebAction" prefHeight="65.0" prefWidth="307.0" text="Truy cập Web">
-
             </Button>
          </children>
       </VBox>
@@ -60,9 +59,9 @@
             <Image url="@../../../assets/image/DaiVietSuKyToanThukanji.png" />
          </image>
       </ImageView>
-      <AnchorPane layoutX="257.0" layoutY="98.0" prefHeight="646.0" prefWidth="975.0">
+      <AnchorPane layoutX="257.0" layoutY="98.0" prefHeight="678.0" prefWidth="975.0">
          <children>
-            <Text layoutX="300.0" layoutY="332.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nhập Triều Đại Lịch Sử Việt Nam " wrappingWidth="373.0699462890625">
+            <Text layoutX="360.0" layoutY="354.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nhập Triều Đại Lịch Sử" wrappingWidth="254.73663330078125">
                <font>
                   <Font size="25.0" />
                </font>

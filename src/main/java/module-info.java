@@ -3,6 +3,7 @@ module com.example.ui_new {
     requires javafx.fxml;
     requires javafx.media;
     requires javafx.web;
+    //requires json.simple;
 
 
     opens com.example.ui_new to javafx.fxml;

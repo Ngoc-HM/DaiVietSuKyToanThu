@@ -22,7 +22,22 @@ public class DiaDiemDiTich implements Initializable {
 
     @FXML
     public ComboBox<String> ListMusic;
-    public Button Intro;
+    @FXML
+    public Button Introl ;
+
+    public void IntrolAction(ActionEvent event) throws IOException {
+        try {
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("hello-view.fxml"));
+            Parent root1 = (Parent) fxmlLoader.load();
+            stage.setTitle("Giới thiệu");
+            stage.setScene(new Scene(root1));
+            stage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 
     ObservableList<String> list = FXCollections.observableArrayList("Kitaro - KOI", "Kitaro - Matsuri", "Nhạc baroque không lời ", "Dòng máu lạc hồng", "Giải phóng Miền Nam", "Đoàn vệ quốc quân", "Bác đang cùng chúng cháu hành quân", "Hào khí Việt Nam");
     public void comboBoxOnAction (ActionEvent event){
@@ -34,57 +49,111 @@ public class DiaDiemDiTich implements Initializable {
         ListMusic.setItems(list);
     }
     @FXML
+    // Khi nhan nut Trieu đai lich su thì hien thi man hinh tim kiem trieu dai lich su
     public Button TrieuDaiLichSu;
-    public void TrieuDaiLichSuAction(ActionEvent event) {
-        System.out.println(TrieuDaiLichSu.getText());
+    public void TrieuDaiLichSuAction(ActionEvent event) throws IOException {
+        try {
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("TrieuDaiLichSu.fxml"));
+            Parent root1 = (Parent) fxmlLoader.load();
+            stage.setTitle("Triều Đại Lịch Sử");
+            stage.setScene(new Scene(root1));
+            stage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
+
     @FXML
     public Button HuyenSuCacViVua;
     public void HuyenSuCacViVuaAction(ActionEvent event) {
-        System.out.println(HuyenSuCacViVua.getText());
+        try {
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("HuyenSuCacViVua.fxml"));
+            Parent root1 = (Parent) fxmlLoader.load();
+            stage.setTitle("Huyền Sử Các Vị Vua");
+            stage.setScene(new Scene(root1));
+            stage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
     @FXML
     public Button TraCuuLeHoi;
     public void TraCuuLeHoiAction(ActionEvent event) {
-        System.out.println(TraCuuLeHoi.getText());
+        try {
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("TraCuuLeHoi.fxml"));
+            Parent root1 = (Parent) fxmlLoader.load();
+            stage.setTitle("Tra Cứu Lễ Hội");
+            stage.setScene(new Scene(root1));
+            stage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
     @FXML
     public Button DiaDiemDiTich;
     public void DiaDiemDiTichAction(ActionEvent event) {
-        System.out.println(DiaDiemDiTich.getText());
+        try {
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("DiaDiemDiTich.fxml"));
+            Parent root1 = (Parent) fxmlLoader.load();
+            stage.setTitle("Địa Điểm Di Tích");
+            stage.setScene(new Scene(root1));
+            stage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         // tạo ra 1 màn hình mới
     }
     @FXML
     public Button SuKienLichSuVietNam;
     public void SuKienLichSuVietNamAction(ActionEvent event) {
-        System.out.println(SuKienLichSuVietNam.getText());
+        try {
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("SuKienLichSuVietNamView.fxml"));
+            Parent root1 = (Parent) fxmlLoader.load();
+            stage.setTitle("Sự kiện lịch sử Việt Nam");
+            stage.setScene(new Scene(root1));
+            stage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     @FXML
     public Button DarkMode;
     // khi ấn nút DarkMode thì đưa ra màn hình ErrorScreen
     public void DarkModeAction(ActionEvent event)  throws IOException {
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(getClass().getResource("ErrorScreen.fxml"));
-        Parent ErrorScreenDarkMode = loader.load();
-        Scene scene = new Scene(ErrorScreenDarkMode);
-        ErrorScreen errorScreen = loader.getController();
-        stage.setScene(scene);
-        stage.show();
+        try {
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("ErrorScreen.fxml"));
+            Parent root1 = (Parent) fxmlLoader.load();
+            stage.setTitle("Error");
+            stage.setScene(new Scene(root1));
+            stage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     @FXML
     public Button DenVang;
     public void DenVangAction(ActionEvent event)  throws IOException {
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(getClass().getResource("ErrorScreen.fxml"));
-        Parent denvang = loader.load();
-        Scene scene = new Scene(denvang);
-        ErrorScreen errorScreen = loader.getController();
-        stage.setScene(scene);
-        stage.show();
+        try {
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("ErrorScreen.fxml"));
+            Parent root1 = (Parent) fxmlLoader.load();
+            stage.setTitle("Error");
+            stage.setScene(new Scene(root1));
+            stage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
     // biến tắt nhạc
     @FXML
@@ -93,14 +162,17 @@ public class DiaDiemDiTich implements Initializable {
     // on Action
     public void TatNhacAction(ActionEvent event)  throws IOException {
         // mở ra màn hình ErrorScreen
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(getClass().getResource("ErrorScreen.fxml"));
-        Parent tatnhac = loader.load();
-        Scene scene = new Scene(tatnhac);
-        ErrorScreen errorScreen = loader.getController();
-        stage.setScene(scene);
-        stage.show();
+        try {
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("ErrorScreen.fxml"));
+            Parent root1 = (Parent) fxmlLoader.load();
+            stage.setTitle("Error");
+            stage.setScene(new Scene(root1));
+            stage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
     @FXML
     public Button NextWeb;
@@ -108,8 +180,8 @@ public class DiaDiemDiTich implements Initializable {
     public void NextWebAction(ActionEvent event) throws IOException {
         try {
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            //FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("WebScreen.fxml"));
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("test.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("WebScreen.fxml"));
+            //FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("test.fxml"));
             Parent root1 = (Parent) fxmlLoader.load();
             stage.setTitle("WebScreen");
             stage.setScene(new Scene(root1));
@@ -139,7 +211,18 @@ public class DiaDiemDiTich implements Initializable {
     @FXML
     public TextField Search;
     public void TimKiemAction(ActionEvent event) throws IOException {
-        System.out.println(Search.getText());
+        try {
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("HuyenSuCacViVuaData.fxml"));
+            Parent root1 = (Parent) fxmlLoader.load();
+            stage.setTitle("Hello");
+            stage.setScene(new Scene(root1));
+            stage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
+
+
 
 }

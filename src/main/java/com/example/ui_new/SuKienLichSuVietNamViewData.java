@@ -11,51 +11,17 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-
 
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class ErrorScreen  implements Initializable {
-    @FXML
-    public Button GoBack;
-    public void GoBackAction(ActionEvent event) {
-        try {
-            Parent root = FXMLLoader.load(getClass().getResource("hello-view.fxml"));
-            Scene scene = new Scene(root);
-            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            stage.setScene(scene);
-            stage.show();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
+public class SuKienLichSuVietNamViewData implements Initializable {
 
     @FXML
     public ComboBox<String> ListMusic;
-    public Button Intro;
-
-    ObservableList<String> list = FXCollections.observableArrayList("Kitaro - KOI", "Kitaro - Matsuri", "Nhạc baroque không lời ", "Dòng máu lạc hồng", "Giải phóng Miền Nam", "Đoàn vệ quốc quân", "Bác đang cùng chúng cháu hành quân", "Hào khí Việt Nam");
-    public void comboBoxOnAction (ActionEvent event){
-        System.out.println( "Nhạc : " + ListMusic.getValue() );
-    }
-
-    @Override
-    public void initialize(URL location, ResourceBundle resources) {
-        ListMusic.setItems(list);
-    }
-    @FXML
-    // Khi nhan nut Trieu đai lich su thì hien thi man hinh tim kiem trieu dai lich su
-    public Button TrieuDaiLichSu;
-
-    @FXML
-    public Button HuyenSuCacViVua;
-
-    @FXML
-    public Button TraCuuLeHoi;
-
 
     public void IntrolAction(ActionEvent event) throws IOException {
         try {
@@ -71,9 +37,18 @@ public class ErrorScreen  implements Initializable {
         }
     }
 
+    ObservableList<String> list = FXCollections.observableArrayList("Kitaro - KOI", "Kitaro - Matsuri", "Nhạc baroque không lời ", "Dòng máu lạc hồng", "Giải phóng Miền Nam", "Đoàn vệ quốc quân", "Bác đang cùng chúng cháu hành quân", "Hào khí Việt Nam");
+    public void comboBoxOnAction (ActionEvent event){
+        System.out.println( "Nhạc : " + ListMusic.getValue() );
+    }
 
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        ListMusic.setItems(list);
+    }
     @FXML
     // Khi nhan nut Trieu đai lich su thì hien thi man hinh tim kiem trieu dai lich su
+    public Button TrieuDaiLichSu;
     public void TrieuDaiLichSuAction(ActionEvent event) throws IOException {
         try {
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -89,7 +64,7 @@ public class ErrorScreen  implements Initializable {
     }
 
     @FXML
-
+    public Button HuyenSuCacViVua;
     public void HuyenSuCacViVuaAction(ActionEvent event) {
         try {
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -102,7 +77,8 @@ public class ErrorScreen  implements Initializable {
             e.printStackTrace();
         }
     }
-
+    @FXML
+    public Button TraCuuLeHoi;
     public void TraCuuLeHoiAction(ActionEvent event) {
         try {
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -115,6 +91,7 @@ public class ErrorScreen  implements Initializable {
             e.printStackTrace();
         }
     }
+
     @FXML
     public Button DiaDiemDiTich;
     public void DiaDiemDiTichAction(ActionEvent event) {
@@ -128,8 +105,8 @@ public class ErrorScreen  implements Initializable {
         } catch (Exception e) {
             e.printStackTrace();
         }
+        // tạo ra 1 màn hình mới
     }
-
     @FXML
     public Button SuKienLichSuVietNam;
     public void SuKienLichSuVietNamAction(ActionEvent event) {
@@ -203,8 +180,8 @@ public class ErrorScreen  implements Initializable {
     public void NextWebAction(ActionEvent event) throws IOException {
         try {
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            // FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("WebScreen.fxml"));
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("test.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("WebScreen.fxml"));
+            //FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("test.fxml"));
             Parent root1 = (Parent) fxmlLoader.load();
             stage.setTitle("WebScreen");
             stage.setScene(new Scene(root1));
@@ -213,5 +190,30 @@ public class ErrorScreen  implements Initializable {
             e.printStackTrace();
         }
     }
+
+    @FXML
+    public Button GoBack;
+    public void GoBackAction(ActionEvent event) throws IOException {
+        try {
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("SuKienLichSuVietNamView.fxml"));
+            Parent root1 = (Parent) fxmlLoader.load();
+            stage.setTitle("Hello");
+            stage.setScene(new Scene(root1));
+            stage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    public Button TimKiem;
+    @FXML
+    public TextField Search;
+    public void TimKiemAction(ActionEvent event) throws IOException {
+        System.out.println(Search.getText());
+    }
+
+
 
 }

@@ -66,12 +66,30 @@ public class HelloController implements Initializable {
     @FXML
     public Button HuyenSuCacViVua;
     public void HuyenSuCacViVuaAction(ActionEvent event) {
-        System.out.println(HuyenSuCacViVua.getText());
+        try {
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("HuyenSuCacViVua.fxml"));
+            Parent root1 = (Parent) fxmlLoader.load();
+            stage.setTitle("Huyền Sử Các Vị Vua");
+            stage.setScene(new Scene(root1));
+            stage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
     @FXML
     public Button TraCuuLeHoi;
     public void TraCuuLeHoiAction(ActionEvent event) {
-        System.out.println(TraCuuLeHoi.getText());
+        try {
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("TraCuuLeHoi.fxml"));
+            Parent root1 = (Parent) fxmlLoader.load();
+            stage.setTitle("Tra Cứu Lễ Hội");
+            stage.setScene(new Scene(root1));
+            stage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
     @FXML
     public Button DiaDiemDiTich;
