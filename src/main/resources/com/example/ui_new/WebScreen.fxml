@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.web.WebView?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1300.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ui_new.WebScreen">
+
+    <Accordion layoutX="151.0" layoutY="142.0" />
+    <VBox layoutX="30.0" prefHeight="768.0" prefWidth="227.0">
+        <AnchorPane prefHeight="97.0" prefWidth="227.0">
+            <ImageView fitHeight="110.0" fitWidth="227.0" pickOnBounds="true" preserveRatio="true">
+                <Image url="@../../../assets/image/HUST_SOICT.png" />
+            </ImageView>
+        </AnchorPane>
+        <HBox prefHeight="47.0" prefWidth="227.0">
+            <Button fx:id="GoBack" mnemonicParsing="false" onAction="#GoBackAction" prefHeight="47.0" prefWidth="111.0" text="Back" />
+        </HBox>
+    </VBox>
+    <AnchorPane layoutX="227.0" prefHeight="98.0" prefWidth="1001.0">
+        <ImageView fitHeight="98.0" fitWidth="741.0" layoutX="231.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@../../../assets/image/DaiVietSuKyToanThu.png" />
+        </ImageView>
+    </AnchorPane>
+    <ImageView fitHeight="238.0" fitWidth="76.0" layoutX="1224.0" pickOnBounds="true" preserveRatio="true">
+        <Image url="@../../../assets/image/DaiVietSuKyToanThukanji.png" />
+    </ImageView>
+    <AnchorPane layoutX="257.0" layoutY="98.0" prefHeight="678.0" prefWidth="975.0">
+        <HBox prefHeight="47.0" prefWidth="975.0">
+            <Button fx:id="Pre" mnemonicParsing="false" prefHeight="46.0" prefWidth="70.0" text="Quay lại" />
+            <Button fx:id="Next" mnemonicParsing="false" prefHeight="46.0" prefWidth="70.0" text="Next" />
+         <Button fx:id="Ok" mnemonicParsing="false" prefHeight="46.0" prefWidth="77.0" text="Tìm" />
+         <TextField prefHeight="47.0" prefWidth="758.0" />
+        </HBox>
+        <WebView layoutY="47.0" prefHeight="594.0" prefWidth="975.0" />
+    </AnchorPane>
+</AnchorPane>

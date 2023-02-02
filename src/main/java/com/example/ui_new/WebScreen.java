@@ -11,7 +11,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class WebView {
+public class WebScreen {
     @FXML
     public Button GoBack;
     public void GoBackAction(ActionEvent event) {
@@ -25,4 +25,17 @@ public class WebView {
             e.printStackTrace();
         }
     }
+
+    @FXML
+    public Button Next;
+
+    @FXML
+    public Button Ok;
+
+    @FXML
+    public Button Pre;
+
+
+
+
 }

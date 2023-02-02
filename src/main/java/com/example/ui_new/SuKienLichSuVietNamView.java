@@ -1,5 +1,6 @@
 package com.example.ui_new;
 
+import com.example.ui_new.ErrorScreen;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -11,13 +12,14 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class HelloController implements Initializable {
+public class SuKienLichSuVietNamView implements Initializable {
 
     @FXML
     public ComboBox<String> ListMusic;
@@ -56,17 +58,7 @@ public class HelloController implements Initializable {
     @FXML
     public Button SuKienLichSuVietNam;
     public void SuKienLichSuVietNamAction(ActionEvent event) {
-        try {
-            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("SuKienLichSuVietNamView.fxml"));
-            Parent root1 = (Parent) fxmlLoader.load();
-            stage.setTitle("Sự kiện lịch sử Việt Nam");
-            stage.setScene(new Scene(root1));
-            stage.show();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        System.out.println(SuKienLichSuVietNam.getText());
     }
 
     @FXML
@@ -117,8 +109,8 @@ public class HelloController implements Initializable {
     public void NextWebAction(ActionEvent event) throws IOException {
         try {
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            // FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("WebScreen.fxml"));
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("WebScreen.fxml"));
+            //FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("WebScreen.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("test.fxml"));
             Parent root1 = (Parent) fxmlLoader.load();
             stage.setTitle("WebScreen");
             stage.setScene(new Scene(root1));
@@ -127,6 +119,31 @@ public class HelloController implements Initializable {
             e.printStackTrace();
         }
     }
+
+    @FXML
+    public Button GoBack;
+    public void GoBackAction(ActionEvent event) throws IOException {
+        try {
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("hello-view.fxml"));
+            Parent root1 = (Parent) fxmlLoader.load();
+            stage.setTitle("Hello");
+            stage.setScene(new Scene(root1));
+            stage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    public Button TimKiem;
+    @FXML
+    public TextField Search;
+    public void TimKiemAction(ActionEvent event) throws IOException {
+        System.out.println(Search.getText());
+    }
+
+
 
 
 }
