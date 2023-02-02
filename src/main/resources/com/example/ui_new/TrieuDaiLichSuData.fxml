@@ -11,9 +11,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1300.0"
-            style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="com.example.ui_new.TrieuDaiLichSuData">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1300.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ui_new.TrieuDaiLichSuData">
 
    <children>
       <Accordion layoutX="151.0" layoutY="142.0" />
@@ -74,12 +72,12 @@
                   <Font size="18.0" />
                </font>
             </Label>
-            <Label layoutX="550.0" layoutY="140.0" text="Label">
+            <Label layoutX="550.0" layoutY="140.0" text="Không rõ">
                <font>
                   <Font size="18.0" />
                </font>
             </Label>
-            <Label layoutX="550.0" layoutY="300.0" text="Label">
+            <Label layoutX="550.0" layoutY="300.0" text="Không rõ">
                <font>
                   <Font size="18.0" />
                </font>
@@ -104,7 +102,7 @@
                   <Font size="18.0" />
                </font>
             </Label>
-            <Label layoutX="550.0" layoutY="260.0" text="Label">
+            <Label layoutX="550.0" layoutY="260.0" text="Không rõ">
                <font>
                   <Font size="18.0" />
                </font>
@@ -119,27 +117,27 @@
                   <Font size="18.0" />
                </font>
             </Label>
-            <Label layoutX="550.0" layoutY="180.0" text="Label">
+            <Label layoutX="550.0" layoutY="180.0" text="Không rõ">
                <font>
                   <Font size="18.0" />
                </font>
             </Label>
-            <Label layoutX="550.0" layoutY="220.0" text="Label">
+            <Label layoutX="550.0" layoutY="220.0" text="Không rõ">
                <font>
                   <Font size="18.0" />
                </font>
             </Label>
-            <Label layoutX="550.0" layoutY="340.0" text="Label">
+            <Label layoutX="550.0" layoutY="340.0" text="Không rõ">
                <font>
                   <Font size="18.0" />
                </font>
             </Label>
-            <Label layoutX="550.0" layoutY="380.0" text="Label">
+            <Label layoutX="550.0" layoutY="380.0" text="Không rõ">
                <font>
                   <Font size="18.0" />
                </font>
             </Label>
-            <Label layoutX="550.0" layoutY="420.0" text="Label">
+            <Label layoutX="550.0" layoutY="420.0" text="Không rõ">
                <font>
                   <Font size="18.0" />
                </font>
