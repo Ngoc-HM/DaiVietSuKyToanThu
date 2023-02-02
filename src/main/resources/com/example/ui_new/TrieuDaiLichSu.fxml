@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="768.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ui_new.TrieuDaiLichSu">
+   <children>
+      <ImageView fitHeight="171.0" fitWidth="322.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../assets/image/HUST_SOICT.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="GoBack" layoutX="459.0" layoutY="494.0" mnemonicParsing="false" onAction="#GoBackAction" prefHeight="48.0" prefWidth="206.0" text="Go Back" />
+      <TextField layoutX="235.0" layoutY="360.0" prefHeight="48.0" prefWidth="654.0" />
+      <ImageView fitHeight="98.0" fitWidth="741.0" layoutX="407.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../assets/image/DaiVietSuKyToanThu.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="238.0" fitWidth="76.0" layoutX="1210.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../assets/image/DaiVietSuKyToanThukanji.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="Tim" layoutX="889.0" layoutY="360.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="96.0" text="Tìm" />
+      <ImageView fitHeight="194.0" fitWidth="351.0" layoutX="431.0" layoutY="125.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../assets/image/TrieuDaiLichSu.png" />
+         </image>
+      </ImageView>
+      <Label text="Label" />
+      <Label layoutX="407.0" layoutY="319.0" prefHeight="40.0" prefWidth="411.0" text="Nhập Triều Đại Lịch Sử Bạn Muốn Tìm">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

@@ -33,9 +33,17 @@ public class HelloController implements Initializable {
         ListMusic.setItems(list);
     }
     @FXML
+    // Khi nhan nut Trieu đai lich su thì hien thi man hinh tim kiem trieu dai lich su
     public Button TrieuDaiLichSu;
-    public void TrieuDaiLichSuAction(ActionEvent event) {
-        System.out.println(TrieuDaiLichSu.getText());
+    public void TrieuDaiLichSuAction(ActionEvent event) throws IOException {
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("TrieuDaiLichSu.fxml"));
+        Parent trieuDaiLichSu = loader.load();
+        Scene scene = new Scene(trieuDaiLichSu);
+        com.example.ui_new.TrieuDaiLichSu trieuDai = loader.getController();
+        stage.setScene(scene);
+        stage.show();
     }
     @FXML
     public Button HuyenSuCacViVua;
