@@ -31,7 +31,7 @@
                   <Button fx:id="DenVang" mnemonicParsing="false" onAction="#DenVangAction" prefHeight="46.0" prefWidth="71.0" text="Đèn Vàng" />
                </children>
             </HBox>
-            <Button fx:id="Intro" mnemonicParsing="false" prefHeight="65.0" prefWidth="307.0" text="Giới Thiệu" />
+            <Button fx:id="Intro" mnemonicParsing="false" onAction="#IntrolAction" prefHeight="65.0" prefWidth="307.0" text="Giới Thiệu" />
             <Button fx:id="TrieuDaiLichSu" mnemonicParsing="false" onAction="#TrieuDaiLichSuAction" prefHeight="65.0" prefWidth="307.0" text="Triều Đại Lịch Sử" />
             <Button fx:id="HuyenSuCacViVua" mnemonicParsing="false" onAction="#HuyenSuCacViVuaAction" prefHeight="65.0" prefWidth="307.0" text="Huyền Sử Vị Vua" />
             <Button fx:id="TraCuuLeHoi" mnemonicParsing="false" onAction="#TraCuuLeHoiAction" prefHeight="65.0" prefWidth="307.0" text="Tra Cứu Lễ Hội" />

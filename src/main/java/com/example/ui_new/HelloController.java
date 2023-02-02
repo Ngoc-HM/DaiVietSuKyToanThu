@@ -36,14 +36,32 @@ public class HelloController implements Initializable {
     // Khi nhan nut Trieu đai lich su thì hien thi man hinh tim kiem trieu dai lich su
     public Button TrieuDaiLichSu;
     public void TrieuDaiLichSuAction(ActionEvent event) throws IOException {
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(getClass().getResource("TrieuDaiLichSu.fxml"));
-        Parent trieuDaiLichSu = loader.load();
-        Scene scene = new Scene(trieuDaiLichSu);
-        com.example.ui_new.TrieuDaiLichSu trieuDai = loader.getController();
-        stage.setScene(scene);
-        stage.show();
+        try {
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("TrieuDaiLichSu.fxml"));
+            Parent root1 = (Parent) fxmlLoader.load();
+            stage.setTitle("Triều Đại Lịch Sử");
+            stage.setScene(new Scene(root1));
+            stage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+    @FXML
+    public Button Introl ;
+    public void IntrolAction(ActionEvent event) throws IOException {
+        try {
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("hello-view.fxml"));
+            Parent root1 = (Parent) fxmlLoader.load();
+            stage.setTitle("Giới thiệu");
+            stage.setScene(new Scene(root1));
+            stage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
     @FXML
     public Button HuyenSuCacViVua;
@@ -58,7 +76,16 @@ public class HelloController implements Initializable {
     @FXML
     public Button DiaDiemDiTich;
     public void DiaDiemDiTichAction(ActionEvent event) {
-        System.out.println(DiaDiemDiTich.getText());
+        try {
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("DiaDiemDiTich.fxml"));
+            Parent root1 = (Parent) fxmlLoader.load();
+            stage.setTitle("Địa Điểm Di Tích");
+            stage.setScene(new Scene(root1));
+            stage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         // tạo ra 1 màn hình mới
     }
     @FXML
@@ -81,27 +108,33 @@ public class HelloController implements Initializable {
     public Button DarkMode;
     // khi ấn nút DarkMode thì đưa ra màn hình ErrorScreen
     public void DarkModeAction(ActionEvent event)  throws IOException {
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(getClass().getResource("ErrorScreen.fxml"));
-        Parent ErrorScreenDarkMode = loader.load();
-        Scene scene = new Scene(ErrorScreenDarkMode);
-        ErrorScreen errorScreen = loader.getController();
-        stage.setScene(scene);
-        stage.show();
+        try {
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("ErrorScreen.fxml"));
+            Parent root1 = (Parent) fxmlLoader.load();
+            stage.setTitle("Error");
+            stage.setScene(new Scene(root1));
+            stage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     @FXML
     public Button DenVang;
     public void DenVangAction(ActionEvent event)  throws IOException {
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(getClass().getResource("ErrorScreen.fxml"));
-        Parent denvang = loader.load();
-        Scene scene = new Scene(denvang);
-        ErrorScreen errorScreen = loader.getController();
-        stage.setScene(scene);
-        stage.show();
+        try {
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("ErrorScreen.fxml"));
+            Parent root1 = (Parent) fxmlLoader.load();
+            stage.setTitle("Error");
+            stage.setScene(new Scene(root1));
+            stage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
     // biến tắt nhạc
     @FXML
@@ -110,14 +143,17 @@ public class HelloController implements Initializable {
     // on Action
     public void TatNhacAction(ActionEvent event)  throws IOException {
         // mở ra màn hình ErrorScreen
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(getClass().getResource("ErrorScreen.fxml"));
-        Parent tatnhac = loader.load();
-        Scene scene = new Scene(tatnhac);
-        ErrorScreen errorScreen = loader.getController();
-        stage.setScene(scene);
-        stage.show();
+        try {
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("ErrorScreen.fxml"));
+            Parent root1 = (Parent) fxmlLoader.load();
+            stage.setTitle("Error");
+            stage.setScene(new Scene(root1));
+            stage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
     @FXML
     public Button NextWeb;
@@ -125,8 +161,8 @@ public class HelloController implements Initializable {
     public void NextWebAction(ActionEvent event) throws IOException {
         try {
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            // FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("WebScreen.fxml"));
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("WebScreen.fxml"));
+            //FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("test.fxml"));
             Parent root1 = (Parent) fxmlLoader.load();
             stage.setTitle("WebScreen");
             stage.setScene(new Scene(root1));

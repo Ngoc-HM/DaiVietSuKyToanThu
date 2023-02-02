@@ -60,7 +60,7 @@
             <Image url="@../../../assets/image/DaiVietSuKyToanThukanji.png" />
          </image>
       </ImageView>
-      <AnchorPane layoutX="257.0" layoutY="98.0" prefHeight="678.0" prefWidth="975.0">
+      <AnchorPane layoutX="257.0" layoutY="98.0" prefHeight="646.0" prefWidth="975.0">
          <children>
             <Text layoutX="300.0" layoutY="332.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nhập Triều Đại Lịch Sử Việt Nam " wrappingWidth="373.0699462890625">
                <font>
