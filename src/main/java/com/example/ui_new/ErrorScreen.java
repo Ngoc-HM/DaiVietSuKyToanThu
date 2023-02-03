@@ -203,8 +203,7 @@ public class ErrorScreen  implements Initializable {
     public void NextWebAction(ActionEvent event) throws IOException {
         try {
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            // FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("WebScreen.fxml"));
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("test.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("WebScreen.fxml"));
             Parent root1 = (Parent) fxmlLoader.load();
             stage.setTitle("WebScreen");
             stage.setScene(new Scene(root1));

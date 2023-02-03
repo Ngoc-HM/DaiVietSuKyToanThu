@@ -65,8 +65,7 @@ public class TraCuuLeHoiData implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         // TODO: read json
         try {
-            Reader reader = Files.newBufferedReader(Paths.get(
-                    "D:\\Visual_Studio_Code\\Java\\DaiVietSuKyToanThu\\src\\main\\resources\\json\\Festival.json"));
+            Reader reader = Files.newBufferedReader(Paths.get("src\\main\\resources\\json\\Festival.json"));
             List<Festival> festivals = new Gson().fromJson(reader, new TypeToken<List<Festival>>() {
             }.getType());
             // festivals.forEach(tmp -> System.out.println(tmp.getFestivalName()));
@@ -246,7 +245,6 @@ public class TraCuuLeHoiData implements Initializable {
         try {
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("WebScreen.fxml"));
-            // FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("test.fxml"));
             Parent root1 = (Parent) fxmlLoader.load();
             stage.setTitle("WebScreen");
             stage.setScene(new Scene(root1));

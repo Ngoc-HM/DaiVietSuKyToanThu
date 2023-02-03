@@ -181,7 +181,7 @@ public class TrieuDaiLichSu implements Initializable {
         try {
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("WebScreen.fxml"));
-            //FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("test.fxml"));
+
             Parent root1 = (Parent) fxmlLoader.load();
             stage.setTitle("WebScreen");
             stage.setScene(new Scene(root1));

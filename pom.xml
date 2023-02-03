@@ -8,8 +8,6 @@
     <artifactId>UI_new</artifactId>
     <version>1.0-SNAPSHOT</version>
     <name>UI_new</name>
-
-
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <junit.version>5.9.1</junit.version>
