@@ -262,7 +262,7 @@ public class TraCuuLeHoiData implements Initializable {
     public void GoBackAction(ActionEvent event) throws IOException {
         try {
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("TraCuuLeHoiData.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("TraCuuLeHoi.fxml"));
             Parent root1 = (Parent) fxmlLoader.load();
             stage.setTitle("Hello");
             stage.setScene(new Scene(root1));

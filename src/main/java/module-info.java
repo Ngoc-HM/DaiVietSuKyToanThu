@@ -4,7 +4,8 @@ module com.example.ui_new {
     requires javafx.media;
     requires javafx.web;
     requires json.simple;
-    requires com.google.gson;
+    requires gson;
+    //requires com.google.gson;
 
 
     opens com.example.ui_new to javafx.fxml;
