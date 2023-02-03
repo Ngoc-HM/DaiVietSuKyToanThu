@@ -13,13 +13,12 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
 public class TraCuuLeHoi implements Initializable {
-
+    public static String findString="";
     @FXML
     public ComboBox<String> ListMusic;
     @FXML
@@ -212,6 +211,7 @@ public class TraCuuLeHoi implements Initializable {
     public TextField Search;
     public void TimKiemAction(ActionEvent event) throws IOException {
         try {
+            findString = Search.getText().toUpperCase().trim();
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("TraCuuLeHoiData.fxml"));
             Parent root1 = (Parent) fxmlLoader.load();
