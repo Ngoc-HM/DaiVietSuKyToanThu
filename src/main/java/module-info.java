@@ -5,11 +5,10 @@ module com.example.ui_new {
     requires javafx.web;
     requires json.simple;
     requires gson;
-    //requires com.google.gson;
+    requires java.sql;
 
 
     opens com.example.ui_new to javafx.fxml;
-    opens com.example.objects to com.google.gson;
+    opens com.example.objects to gson;
     exports com.example.ui_new;
-    //opens com.example.ui_new.Controller to javafx.fxml;
 }
