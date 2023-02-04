@@ -11,6 +11,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
+import javafx.scene.media.MediaPlayer;
 import javafx.stage.Stage;
 
 
@@ -181,22 +182,13 @@ public class ErrorScreen  implements Initializable {
     // biến tắt nhạc
     @FXML
     public Button TatNhac; // id
-
-    // on Action
     public void TatNhacAction(ActionEvent event)  throws IOException {
         // mở ra màn hình ErrorScreen
-        try {
-            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("ErrorScreen.fxml"));
-            Parent root1 = (Parent) fxmlLoader.load();
-            stage.setTitle("Error");
-            stage.setScene(new Scene(root1));
-            stage.show();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        if(HelloApplication.mediaPlayer.getStatus() == MediaPlayer.Status.PLAYING) {
+            HelloApplication.mediaPlayer.pause();
+        }else HelloApplication.mediaPlayer.play();
     }
+    // on Action
     @FXML
     public Button NextWeb;
 

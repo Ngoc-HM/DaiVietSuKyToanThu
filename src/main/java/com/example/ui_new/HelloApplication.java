@@ -13,6 +13,8 @@ import org.json.simple.parser.*;
 
 public class HelloApplication extends Application {
     public static MediaPlayer mediaPlayer;
+    public static Scene scene;
+    public static Stage stage;
 
     @Override
     public void start(Stage stage) throws IOException {
@@ -26,7 +28,6 @@ public class HelloApplication extends Application {
         // chạy cửa sổ menu
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
-
         stage.setTitle("Đại Việt Sử Ký Toàn Thư - Project Lập Trình Hướng Đối Tượng !");
         stage.setScene(scene);
         stage.show();

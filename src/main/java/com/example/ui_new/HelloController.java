@@ -15,7 +15,6 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.stage.Stage;
-import com.example.ui_new.HelloApplication;
 
 import java.io.IOException;
 import java.net.URL;
@@ -27,7 +26,9 @@ public class HelloController implements Initializable {
     public ComboBox<String> ListMusic;
     public Button Intro;
 
-    ObservableList<String> list = FXCollections.observableArrayList("Kitaro - KOI", "Kitaro - Matsuri", "Nhạc baroque không lời ", "Dòng máu lạc hồng", "Giải phóng Miền Nam", "Đoàn vệ quốc quân", "Bác đang cùng chúng cháu hành quân", "Hào khí Việt Nam");
+    ObservableList<String> list = FXCollections.observableArrayList("Kitaro - KOI",
+            "Kitaro - Matsuri", "Nhạc baroque không lời ", "Dòng máu lạc hồng", "Giải phóng Miền Nam",
+            "Đoàn vệ quốc quân", "Bác đang cùng chúng cháu hành quân", "Hào khí Việt Nam");
     public void comboBoxOnAction (ActionEvent event){
         System.out.println( "Nhạc : " + ListMusic.getValue() );
     }
@@ -125,7 +126,7 @@ public class HelloController implements Initializable {
             e.printStackTrace();
         }
     }
-
+    public boolean darkModecheck = false;
     @FXML
     public Button DarkMode;
     // khi ấn nút DarkMode thì đưa ra màn hình ErrorScreen
@@ -141,6 +142,8 @@ public class HelloController implements Initializable {
         } catch (Exception e) {
             e.printStackTrace();
         }
+
+
     }
 
     @FXML
@@ -165,7 +168,9 @@ public class HelloController implements Initializable {
     // on Action
     public void TatNhacAction(ActionEvent event) throws IOException {
         // mở ra màn hình ErrorScreen
-    HelloApplication.mediaPlayer.stop();
+        if(HelloApplication.mediaPlayer.getStatus() == MediaPlayer.Status.PLAYING) {
+            HelloApplication.mediaPlayer.pause();
+        }else HelloApplication.mediaPlayer.play();
     }
     @FXML
     public Button NextWeb;
