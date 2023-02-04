@@ -21,16 +21,76 @@ import java.net.URL;
 import java.nio.file.Paths;
 import java.util.ResourceBundle;
 
+import static com.example.ui_new.HelloApplication.mediaPlayer;
+
 public class HelloController implements Initializable {
     @FXML
     public ComboBox<String> ListMusic;
+    @FXML
     public Button Intro;
+    @FXML
+            public Button tang, giam;
+    public void tangAction(ActionEvent event) throws IOException {
+        if(HelloApplication.mediaPlayer.getVolume() < 1.0)
+            HelloApplication.mediaPlayer.setVolume(HelloApplication.mediaPlayer.getVolume() + 0.1);
+    }
+    public void giamAction(ActionEvent event) throws IOException {
+        if(HelloApplication.mediaPlayer.getVolume() > 0)
+            HelloApplication.mediaPlayer.setVolume(HelloApplication.mediaPlayer.getVolume() - 0.1);
+    }
+
 
     ObservableList<String> list = FXCollections.observableArrayList("Kitaro - KOI",
             "Kitaro - Matsuri", "Nhạc baroque không lời ", "Dòng máu lạc hồng", "Giải phóng Miền Nam",
             "Đoàn vệ quốc quân", "Bác đang cùng chúng cháu hành quân", "Hào khí Việt Nam");
     public void comboBoxOnAction (ActionEvent event){
         System.out.println( "Nhạc : " + ListMusic.getValue() );
+        String trunggian = ListMusic.getValue();
+        HelloApplication.mediaPlayer.stop();
+        switch (trunggian) {
+            case "Hào khí Việt Nam" -> {
+                HelloApplication.mediaPlayer.stop();
+                Media media = new Media(Paths.get("src/main/resources/assets/music/HaoKhiVietNam.mp3").toUri().toString());
+                HelloApplication.mediaPlayer = new MediaPlayer(media);
+
+            }
+            case "Kitaro - KOI" -> {
+                HelloApplication.mediaPlayer.stop();
+                Media media = new Media(Paths.get("src/main/resources/assets/music/KOI.mp3").toUri().toString());
+                HelloApplication.mediaPlayer = new MediaPlayer(media);
+            }
+            case "Kitaro - Matsuri" -> {
+                HelloApplication.mediaPlayer.stop();
+                Media media = new Media(Paths.get("src/main/resources/assets/music/Matsuri.mp3").toUri().toString());
+                HelloApplication.mediaPlayer = new MediaPlayer(media);
+
+            }
+            case "Nhạc baroque không lời " -> {
+                HelloApplication.mediaPlayer.stop();
+                Media media = new Media(Paths.get("src/main/resources/assets/music/NhacKhongLoi.mp3").toUri().toString());
+                HelloApplication.mediaPlayer = new MediaPlayer(media);
+            }
+            case "Dòng máu lạc hồng" -> {
+
+                Media media = new Media(Paths.get("src/main/resources/assets/music/DongMauLacHong.mp3").toUri().toString());
+                HelloApplication.mediaPlayer = new MediaPlayer(media);
+
+            }
+            case "Giải phóng Miền Nam" -> {
+
+                Media media = new Media(Paths.get("src/main/resources/assets/music/GiaiPhongMienNam.mp3").toUri().toString());
+                HelloApplication.mediaPlayer = new MediaPlayer(media);
+
+            }
+            case "Bác đang cùng chúng cháu hành quân" -> {
+
+                Media media = new Media(Paths.get("src/main/resources/assets/music/BacDangCungChungChauHanhQuan.mp3").toUri().toString());
+                HelloApplication.mediaPlayer = new MediaPlayer(media);
+            }
+        }
+        HelloApplication.mediaPlayer.setAutoPlay(true);
+        HelloApplication.mediaPlayer.setMute(false);
+        HelloApplication.mediaPlayer.play();
     }
 
     @Override
@@ -168,9 +228,9 @@ public class HelloController implements Initializable {
     // on Action
     public void TatNhacAction(ActionEvent event) throws IOException {
         // mở ra màn hình ErrorScreen
-        if(HelloApplication.mediaPlayer.getStatus() == MediaPlayer.Status.PLAYING) {
-            HelloApplication.mediaPlayer.pause();
-        }else HelloApplication.mediaPlayer.play();
+        if(mediaPlayer.getStatus() == MediaPlayer.Status.PLAYING) {
+            mediaPlayer.pause();
+        }else mediaPlayer.play();
     }
     @FXML
     public Button NextWeb;
