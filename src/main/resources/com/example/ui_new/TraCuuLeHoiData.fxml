@@ -27,11 +27,11 @@
                     </children>
                 </AnchorPane>
                 <ComboBox fx:id="ListMusic" onAction="#comboBoxOnAction" prefHeight="34.0" prefWidth="227.0" promptText="Hào Khí Việt Nam" />
+                <Button fx:id="TatNhac" mnemonicParsing="false" onAction="#TatNhacAction" prefHeight="46.0" prefWidth="227.0" text="Tắt/Bật Nhạc" />
                 <HBox prefHeight="47.0" prefWidth="227.0">
                     <children>
-                        <Button fx:id="TatNhac" mnemonicParsing="false" onAction="#TatNhacAction" prefHeight="46.0" prefWidth="78.0" text="Tắt Nhạc" />
-                        <Button fx:id="DarkMode" mnemonicParsing="false" onAction="#DarkModeAction" prefHeight="46.0" prefWidth="78.0" text="DarkMode" />
-                        <Button fx:id="DenVang" mnemonicParsing="false" onAction="#DenVangAction" prefHeight="46.0" prefWidth="71.0" text="Đèn Vàng" />
+                        <Button fx:id="DarkMode" mnemonicParsing="false" onAction="#DarkModeAction" prefHeight="46.0" prefWidth="110.0" text="DarkMode" />
+                        <Button fx:id="DenVang" mnemonicParsing="false" onAction="#DenVangAction" prefHeight="46.0" prefWidth="119.0" text="Đèn Vàng" />
                     </children>
                 </HBox>
                 <Button fx:id="Intro" mnemonicParsing="false" onAction="#IntrolAction" prefHeight="65.0" prefWidth="307.0" text="Giới Thiệu" />
