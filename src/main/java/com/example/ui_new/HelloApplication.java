@@ -12,14 +12,17 @@ import java.nio.file.Paths;
 import org.json.simple.parser.*;
 
 public class HelloApplication extends Application {
+    public static MediaPlayer mediaPlayer;
+
     @Override
     public void start(Stage stage) throws IOException {
+        Media media = new Media(Paths.get("src/main/resources/assets/music/HaoKhiVietNam.mp3").toUri().toString());
+        mediaPlayer = new MediaPlayer(media);
         // Phát nhạc hào khí Việt Nam
-          Media media = new Media(Paths.get("src/main/resources/assets/music/HaoKhiVietNam.mp3").toUri().toString());
-            MediaPlayer mediaPlayer = new MediaPlayer(media);
-            mediaPlayer.setAutoPlay(true);
-            mediaPlayer.setMute(false);
-            mediaPlayer.play();
+        mediaPlayer.setAutoPlay(true);
+        mediaPlayer.setMute(false);
+        mediaPlayer.play();
+
         // chạy cửa sổ menu
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load());

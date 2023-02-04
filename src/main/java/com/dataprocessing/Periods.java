@@ -2,8 +2,6 @@ package com.dataprocessing;
 
 import java.io.Serializable;
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -21,7 +19,7 @@ public class Periods implements Serializable{
 	Periods PeriodPredecessor;
 	Periods PeriodSuccessor;
 	String Capital;
-    Characters FirstEmperor;
+    String FirstEmperor;
     Characters LastEmperor;
     String Religion;
 	
@@ -75,11 +73,11 @@ public class Periods implements Serializable{
 		Capital = capital;
 	}
 
-	public Characters getFirstEmperor() {
+	public String getFirstEmperor() {
 		return FirstEmperor;
 	}
 
-	public static Characters matchingName(String name){
+	public static String matchingName(String name){
 		Characters wanted = null;
 		for (Characters ch : Characters.charactersList) {
             if (ch.getName().contains(name)){
@@ -87,7 +85,7 @@ public class Periods implements Serializable{
             	break;
             }
         }
-        return wanted;
+        return String.valueOf(wanted);
     }
 	
 	/*
@@ -101,7 +99,7 @@ public class Periods implements Serializable{
 	}
 	*/
 	
-	public void setFirstEmperor(Characters firstEmperor) {
+	public void setFirstEmperor(String firstEmperor) {
 		FirstEmperor = firstEmperor;
 	}
 
@@ -182,10 +180,13 @@ public class Periods implements Serializable{
             //System.out.printf("index %d\n",matchingName("Đinh Liễn"));
             //System.out.println(Characters.charactersList.get(4).getName().contains("Đinh Liễn") );
            
-    		
+    		/*
             System.out.println("------- (example) Character List -------");
             for (Periods i : periodsList){
-            	System.out.printf("%-20s %-20s %-15s \n", i.getPeriodName(), i.getCapital(), i.getFirstEmperor().getName());
+            	System.out.printf("%-20s %-20s %-15s \n",
+						i.getPeriodName(), i.getCapital(), i.getFirstEmperor().replace());
             }
+            */
+
     }
 }
