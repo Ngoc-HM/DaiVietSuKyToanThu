@@ -90,82 +90,32 @@
         <AnchorPane layoutX="257.0" layoutY="98.0" prefHeight="678.0" prefWidth="975.0">
             <children>
                 <Button fx:id="GoBack" layoutX="43.0" layoutY="35.0" mnemonicParsing="false" onAction="#GoBackAction" prefHeight="59.0" prefWidth="78.0" text="Go Back" />
-                <Label layoutX="262.0" layoutY="260.0" text="Thời Đại Kế Nhiệm">
+                <Label fx:id="nameLabel" layoutX="549.0" layoutY="215.0" text="Không rõ">
                     <font>
                         <Font size="18.0" />
                     </font>
                 </Label>
-                <Label layoutX="262.0" layoutY="340.0" text="Vị Vua Đầu Tiên">
+                <Label layoutX="261.0" layoutY="295.0" text="Sự Kiện Liên Quan">
                     <font>
                         <Font size="18.0" />
                     </font>
                 </Label>
-                <Label layoutX="550.0" layoutY="140.0" text="Không rõ">
+                <Label layoutX="261.0" layoutY="255.0" text="Thông Tin">
                     <font>
                         <Font size="18.0" />
                     </font>
                 </Label>
-                <Label layoutX="550.0" layoutY="300.0" text="Không rõ">
+                <Label layoutX="261.0" layoutY="215.0" text="Tên Địa Danh">
                     <font>
                         <Font size="18.0" />
                     </font>
                 </Label>
-                <Label layoutX="262.0" layoutY="220.0" text="Thời Đại Tiền Nhiệm">
+                <Label fx:id="contentLabel" layoutX="549.0" layoutY="255.0" text="Không rõ">
                     <font>
                         <Font size="18.0" />
                     </font>
                 </Label>
-                <Label layoutX="262.0" layoutY="300.0" text="Đóng Đô">
-                    <font>
-                        <Font size="18.0" />
-                    </font>
-                </Label>
-                <Label layoutX="262.0" layoutY="180.0" text="Thời Gian">
-                    <font>
-                        <Font size="18.0" />
-                    </font>
-                </Label>
-                <Label layoutX="262.0" layoutY="140.0" text="Tên Vua">
-                    <font>
-                        <Font size="18.0" />
-                    </font>
-                </Label>
-                <Label layoutX="550.0" layoutY="260.0" text="Không rõ">
-                    <font>
-                        <Font size="18.0" />
-                    </font>
-                </Label>
-                <Label layoutX="262.0" layoutY="420.0" text="Tôn Giáo">
-                    <font>
-                        <Font size="18.0" />
-                    </font>
-                </Label>
-                <Label layoutX="262.0" layoutY="380.0" text="Vị Vua Cuối Cùng">
-                    <font>
-                        <Font size="18.0" />
-                    </font>
-                </Label>
-                <Label layoutX="550.0" layoutY="180.0" text="Không rõ">
-                    <font>
-                        <Font size="18.0" />
-                    </font>
-                </Label>
-                <Label layoutX="550.0" layoutY="220.0" text="Không rõ">
-                    <font>
-                        <Font size="18.0" />
-                    </font>
-                </Label>
-                <Label layoutX="550.0" layoutY="340.0" text="Không rõ">
-                    <font>
-                        <Font size="18.0" />
-                    </font>
-                </Label>
-                <Label layoutX="550.0" layoutY="380.0" text="Không rõ">
-                    <font>
-                        <Font size="18.0" />
-                    </font>
-                </Label>
-                <Label layoutX="550.0" layoutY="420.0" text="Không rõ">
+                <Label fx:id="eventLabel" layoutX="549.0" layoutY="295.0" text="Không rõ">
                     <font>
                         <Font size="18.0" />
                     </font>
