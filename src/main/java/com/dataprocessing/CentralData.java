@@ -75,7 +75,7 @@ public class CentralData implements Serializable{
         //JSON parser object to parse read file
         JSONParser jsonParser = new JSONParser();
          
-        FileReader reader = new FileReader("D:\\Resources\\SampleDataBase.json");
+        FileReader reader = new FileReader("//resources//json//CentralData.json");
             //Read JSON file
             Object obj = jsonParser.parse(reader);
             
