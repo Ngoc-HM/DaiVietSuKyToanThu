@@ -4,6 +4,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
@@ -21,14 +22,17 @@ public class HelloApplication extends Application {
         Media media = new Media(Paths.get("src/main/resources/assets/music/Conginuadau.mp3").toUri().toString());
         mediaPlayer = new MediaPlayer(media);
         // Phát nhạc hào khí Việt Nam
-        mediaPlayer.setAutoPlay(true);
         mediaPlayer.setMute(false);
         mediaPlayer.play();
+        mediaPlayer.setAutoPlay(true);
 
         // chạy cửa sổ menu
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         stage.setTitle("Đại Việt Sử Ký Toàn Thư - Project Lập Trình Hướng Đối Tượng !");
+        Image icon = new Image(Paths.get("src/main/resources/assets/image/app.png").toUri().toString());
+        stage.getIcons().add(icon);
+
         stage.setScene(scene);
         stage.show();
     }

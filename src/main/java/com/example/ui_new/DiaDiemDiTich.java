@@ -277,7 +277,7 @@ public class DiaDiemDiTich implements Initializable {
     public void TimKiemAction(ActionEvent event) throws IOException {
         try {
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("HuyenSuCacViVuaData.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("DiaDiemDiTichData.fxml"));
             Parent root1 = (Parent) fxmlLoader.load();
             stage.setTitle("Địa Điểm Di Tích");
             stage.setScene(new Scene(root1));

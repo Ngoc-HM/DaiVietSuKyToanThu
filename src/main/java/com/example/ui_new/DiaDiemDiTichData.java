@@ -1,6 +1,5 @@
 package com.example.ui_new;
 
-import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -12,6 +11,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.TextField;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.stage.Stage;
@@ -21,13 +21,27 @@ import java.net.URL;
 import java.nio.file.Paths;
 import java.util.ResourceBundle;
 
-import static com.example.ui_new.HelloApplication.mediaPlayer;
+public class DiaDiemDiTichData implements Initializable {
 
-public class HelloController implements Initializable {
     @FXML
     public ComboBox<String> ListMusic;
     @FXML
-    public Button Intro;
+    public Button Introl ;
+    public void IntrolAction(ActionEvent event) throws IOException {
+        try {
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("hello-view.fxml"));
+            Parent root1 = (Parent) fxmlLoader.load();
+            stage.setTitle("Giới thiệu");
+            stage.setScene(new Scene(root1));
+            stage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+
     @FXML
     public Button tang, giam;
     public void tangAction(ActionEvent event) throws IOException {
@@ -97,12 +111,10 @@ public class HelloController implements Initializable {
                 HelloApplication.mediaPlayer = new MediaPlayer(media);
             }
         }
-
+        HelloApplication.mediaPlayer.setAutoPlay(true);
         HelloApplication.mediaPlayer.setMute(false);
         HelloApplication.mediaPlayer.play();
-        HelloApplication.mediaPlayer.setAutoPlay(true);
     }
-
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         ListMusic.setItems(list);
@@ -123,21 +135,7 @@ public class HelloController implements Initializable {
             e.printStackTrace();
         }
     }
-    @FXML
-    public Button Introl ;
-    public void IntrolAction(ActionEvent event) throws IOException {
-        try {
-            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("hello-view.fxml"));
-            Parent root1 = (Parent) fxmlLoader.load();
-            stage.setTitle("Giới thiệu");
-            stage.setScene(new Scene(root1));
-            stage.show();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
     @FXML
     public Button HuyenSuCacViVua;
     public void HuyenSuCacViVuaAction(ActionEvent event) {
@@ -166,6 +164,7 @@ public class HelloController implements Initializable {
             e.printStackTrace();
         }
     }
+
     @FXML
     public Button DiaDiemDiTich;
     public void DiaDiemDiTichAction(ActionEvent event) {
@@ -196,7 +195,7 @@ public class HelloController implements Initializable {
             e.printStackTrace();
         }
     }
-    public boolean darkModecheck = false;
+
     @FXML
     public Button DarkMode;
     // khi ấn nút DarkMode thì đưa ra màn hình ErrorScreen
@@ -212,8 +211,6 @@ public class HelloController implements Initializable {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
-
     }
 
     @FXML
@@ -236,11 +233,11 @@ public class HelloController implements Initializable {
     public Button TatNhac; // id
 
     // on Action
-    public void TatNhacAction(ActionEvent event) throws IOException {
+    public void TatNhacAction(ActionEvent event)  throws IOException {
         // mở ra màn hình ErrorScreen
-        if(mediaPlayer.getStatus() == MediaPlayer.Status.PLAYING) {
-            mediaPlayer.pause();
-        }else mediaPlayer.play();
+        if(HelloApplication.mediaPlayer.getStatus() == MediaPlayer.Status.PLAYING) {
+            HelloApplication.mediaPlayer.pause();
+        }else HelloApplication.mediaPlayer.play();
     }
     @FXML
     public Button NextWeb;
@@ -257,6 +254,30 @@ public class HelloController implements Initializable {
             e.printStackTrace();
         }
     }
+
+    @FXML
+    public Button GoBack;
+    public void GoBackAction(ActionEvent event) throws IOException {
+        try {
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("DiaDiemDiTich.fxml"));
+            Parent root1 = (Parent) fxmlLoader.load();
+            stage.setTitle("Địa Điểm Di Tích");
+            stage.setScene(new Scene(root1));
+            stage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    public Button TimKiem;
+    @FXML
+    public TextField Search;
+    public void TimKiemAction(ActionEvent event) throws IOException {
+        System.out.println(Search.getText());
+    }
+
 
 
 }
