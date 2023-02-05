@@ -90,12 +90,12 @@
         <AnchorPane layoutX="257.0" layoutY="98.0" prefHeight="678.0" prefWidth="975.0">
             <children>
                 <Button fx:id="GoBack" layoutX="43.0" layoutY="35.0" mnemonicParsing="false" onAction="#GoBackAction" prefHeight="59.0" prefWidth="78.0" text="Go Back" />
-                <Label layoutX="304.0" layoutY="305.0" text="Mô tả">
+                <Label layoutX="304.0" layoutY="385.0" text="Mô tả">
                     <font>
                         <Font size="18.0" />
                     </font>
                 </Label>
-                <Label layoutX="304.0" layoutY="385.0" text="Năm mất">
+                <Label layoutX="304.0" layoutY="305.0" text="Năm mất">
                     <font>
                         <Font size="18.0" />
                     </font>
@@ -135,7 +135,7 @@
                         <Font size="18.0" />
                     </font>
                 </Label>
-                <Label fx:id="diedYearLabel" layoutX="592.0" layoutY="385.0" text="Không rõ">
+                <Label fx:id="diedYearLabel" layoutX="592.0" layoutY="305.0" text="Không rõ">
                     <font>
                         <Font size="18.0" />
                     </font>
@@ -145,7 +145,7 @@
                         <Font size="18.0" />
                     </font>
                 </Label>
-                <Label fx:id="descriptionLabel" layoutX="592.0" layoutY="305.0" text="Không rõ">
+                <Label fx:id="descriptionLabel" layoutX="592.0" layoutY="385.0" text="Không rõ">
                     <font>
                         <Font size="18.0" />
                     </font>
