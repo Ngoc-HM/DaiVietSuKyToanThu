@@ -159,6 +159,8 @@ public class DiaDiemDiTichData implements Initializable {
                     }
                 }
             if (found) {
+                contentLabel.setWrapText(true);
+                contentLabel.setMaxWidth(650);
                 contentLabel.setText(relics.get(i).getRelicDescription());
                 nameLabel.setText(relics.get(i).getRelicName());
                 String[] tmp = relics.get(i).getRelatedEvent();
