@@ -22,11 +22,11 @@ import java.nio.file.Paths;
 import java.util.ResourceBundle;
 
 public class DiaDiemDiTich implements Initializable {
-
+    public static String findString = "";
     @FXML
     public ComboBox<String> ListMusic;
     @FXML
-    public Button Introl ;
+    public Button Introl;
 
     public void IntrolAction(ActionEvent event) throws IOException {
         try {
@@ -42,39 +42,44 @@ public class DiaDiemDiTich implements Initializable {
         }
     }
 
-
     @FXML
     public Button tang, giam;
+
     public void tangAction(ActionEvent event) throws IOException {
-        if(HelloApplication.mediaPlayer.getVolume() < 1.0)
+        if (HelloApplication.mediaPlayer.getVolume() < 1.0)
             HelloApplication.mediaPlayer.setVolume(HelloApplication.mediaPlayer.getVolume() + 0.1);
     }
+
     public void giamAction(ActionEvent event) throws IOException {
-        if(HelloApplication.mediaPlayer.getVolume() > 0)
+        if (HelloApplication.mediaPlayer.getVolume() > 0)
             HelloApplication.mediaPlayer.setVolume(HelloApplication.mediaPlayer.getVolume() - 0.1);
     }
 
     ObservableList<String> list = FXCollections.observableArrayList("Kitaro - KOI",
             "Kitaro - Matsuri", "Nhạc baroque không lời ", "Dòng máu lạc hồng", "Giải phóng Miền Nam",
             "Đoàn vệ quốc quân", "Bác đang cùng chúng cháu hành quân", "Hào khí Việt Nam", "Hát Mãi Khúc Quân Hành");
-    public void comboBoxOnAction (ActionEvent event){
-        System.out.println( "Nhạc : " + ListMusic.getValue() );
+
+    public void comboBoxOnAction(ActionEvent event) {
+        System.out.println("Nhạc : " + ListMusic.getValue());
         String trunggian = ListMusic.getValue();
         HelloApplication.mediaPlayer.stop();
         switch (trunggian) {
             case "Hát Mãi Khúc Quân Hành" -> {
                 HelloApplication.mediaPlayer.stop();
-                Media media = new Media(Paths.get("src/main/resources/assets/music/HatMaiKhucQuanHanh.mp3").toUri().toString());
+                Media media = new Media(
+                        Paths.get("src/main/resources/assets/music/HatMaiKhucQuanHanh.mp3").toUri().toString());
                 HelloApplication.mediaPlayer = new MediaPlayer(media);
             }
             case "Đoàn vệ quốc quân" -> {
                 HelloApplication.mediaPlayer.stop();
-                Media media = new Media(Paths.get("src/main/resources/assets/music/DoanveQuocQuan.mp3").toUri().toString());
+                Media media = new Media(
+                        Paths.get("src/main/resources/assets/music/DoanveQuocQuan.mp3").toUri().toString());
                 HelloApplication.mediaPlayer = new MediaPlayer(media);
             }
             case "Hào khí Việt Nam" -> {
                 HelloApplication.mediaPlayer.stop();
-                Media media = new Media(Paths.get("src/main/resources/assets/music/HaoKhiVietNam.mp3").toUri().toString());
+                Media media = new Media(
+                        Paths.get("src/main/resources/assets/music/HaoKhiVietNam.mp3").toUri().toString());
                 HelloApplication.mediaPlayer = new MediaPlayer(media);
 
             }
@@ -91,24 +96,28 @@ public class DiaDiemDiTich implements Initializable {
             }
             case "Nhạc baroque không lời " -> {
                 HelloApplication.mediaPlayer.stop();
-                Media media = new Media(Paths.get("src/main/resources/assets/music/NhacKhongLoi.mp3").toUri().toString());
+                Media media = new Media(
+                        Paths.get("src/main/resources/assets/music/NhacKhongLoi.mp3").toUri().toString());
                 HelloApplication.mediaPlayer = new MediaPlayer(media);
             }
             case "Dòng máu lạc hồng" -> {
 
-                Media media = new Media(Paths.get("src/main/resources/assets/music/DongMauLacHong.mp3").toUri().toString());
+                Media media = new Media(
+                        Paths.get("src/main/resources/assets/music/DongMauLacHong.mp3").toUri().toString());
                 HelloApplication.mediaPlayer = new MediaPlayer(media);
 
             }
             case "Giải phóng Miền Nam" -> {
 
-                Media media = new Media(Paths.get("src/main/resources/assets/music/GiaiPhongMienNam.mp3").toUri().toString());
+                Media media = new Media(
+                        Paths.get("src/main/resources/assets/music/GiaiPhongMienNam.mp3").toUri().toString());
                 HelloApplication.mediaPlayer = new MediaPlayer(media);
 
             }
             case "Bác đang cùng chúng cháu hành quân" -> {
 
-                Media media = new Media(Paths.get("src/main/resources/assets/music/BacDangCungChungChauHanhQuan.mp3").toUri().toString());
+                Media media = new Media(Paths.get("src/main/resources/assets/music/BacDangCungChungChauHanhQuan.mp3")
+                        .toUri().toString());
                 HelloApplication.mediaPlayer = new MediaPlayer(media);
             }
         }
@@ -117,13 +126,17 @@ public class DiaDiemDiTich implements Initializable {
         HelloApplication.mediaPlayer.play();
         HelloApplication.mediaPlayer.setCycleCount(MediaPlayer.INDEFINITE);
     }
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         ListMusic.setItems(list);
     }
+
     @FXML
-    // Khi nhan nut Trieu đai lich su thì hien thi man hinh tim kiem trieu dai lich su
+    // Khi nhan nut Trieu đai lich su thì hien thi man hinh tim kiem trieu dai lich
+    // su
     public Button TrieuDaiLichSu;
+
     public void TrieuDaiLichSuAction(ActionEvent event) throws IOException {
         try {
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -140,6 +153,7 @@ public class DiaDiemDiTich implements Initializable {
 
     @FXML
     public Button HuyenSuCacViVua;
+
     public void HuyenSuCacViVuaAction(ActionEvent event) {
         try {
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -152,8 +166,10 @@ public class DiaDiemDiTich implements Initializable {
             e.printStackTrace();
         }
     }
+
     @FXML
     public Button TraCuuLeHoi;
+
     public void TraCuuLeHoiAction(ActionEvent event) {
         try {
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -166,8 +182,10 @@ public class DiaDiemDiTich implements Initializable {
             e.printStackTrace();
         }
     }
+
     @FXML
     public Button DiaDiemDiTich;
+
     public void DiaDiemDiTichAction(ActionEvent event) {
         try {
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -181,8 +199,10 @@ public class DiaDiemDiTich implements Initializable {
         }
         // tạo ra 1 màn hình mới
     }
+
     @FXML
     public Button SuKienLichSuVietNam;
+
     public void SuKienLichSuVietNamAction(ActionEvent event) {
         try {
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -198,8 +218,9 @@ public class DiaDiemDiTich implements Initializable {
 
     @FXML
     public Button DarkMode;
+
     // khi ấn nút DarkMode thì đưa ra màn hình ErrorScreen
-    public void DarkModeAction(ActionEvent event)  throws IOException {
+    public void DarkModeAction(ActionEvent event) throws IOException {
         try {
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
@@ -215,7 +236,8 @@ public class DiaDiemDiTich implements Initializable {
 
     @FXML
     public Button DenVang;
-    public void DenVangAction(ActionEvent event)  throws IOException {
+
+    public void DenVangAction(ActionEvent event) throws IOException {
         try {
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
@@ -228,17 +250,20 @@ public class DiaDiemDiTich implements Initializable {
             e.printStackTrace();
         }
     }
+
     // biến tắt nhạc
     @FXML
     public Button TatNhac; // id
 
     // on Action
-    public void TatNhacAction(ActionEvent event)  throws IOException {
+    public void TatNhacAction(ActionEvent event) throws IOException {
         // mở ra màn hình ErrorScreen
-        if(HelloApplication.mediaPlayer.getStatus() == MediaPlayer.Status.PLAYING) {
+        if (HelloApplication.mediaPlayer.getStatus() == MediaPlayer.Status.PLAYING) {
             HelloApplication.mediaPlayer.pause();
-        }else HelloApplication.mediaPlayer.play();
+        } else
+            HelloApplication.mediaPlayer.play();
     }
+
     @FXML
     public Button NextWeb;
 
@@ -258,6 +283,7 @@ public class DiaDiemDiTich implements Initializable {
 
     @FXML
     public Button GoBack;
+
     public void GoBackAction(ActionEvent event) throws IOException {
         try {
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -275,8 +301,10 @@ public class DiaDiemDiTich implements Initializable {
     public Button TimKiem;
     @FXML
     public TextField Search;
+
     public void TimKiemAction(ActionEvent event) throws IOException {
         try {
+            findString = Search.getText().toUpperCase().trim();
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("DiaDiemDiTichData.fxml"));
             Parent root1 = (Parent) fxmlLoader.load();
@@ -287,7 +315,5 @@ public class DiaDiemDiTich implements Initializable {
             e.printStackTrace();
         }
     }
-
-
 
 }
