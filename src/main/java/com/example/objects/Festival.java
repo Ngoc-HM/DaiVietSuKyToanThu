@@ -1,19 +1,19 @@
 package com.example.objects;
 
 public class Festival {
-   private String festivallunarDate;
+   private String lunarDate;
    private String festivalLocation;
    private String festivalName;
-   private String festivalrelatedFigure;
+   private String relatedFigure;
    
    public Festival(String lunarDate, String festivalLocation, String festivalName, String relatedFigure) {
-      this.festivallunarDate = lunarDate;
+      this.lunarDate = lunarDate;
       this.festivalLocation = festivalLocation;
       this.festivalName = festivalName;
-      this.festivalrelatedFigure = relatedFigure;
+      this.relatedFigure = relatedFigure;
    }
    public String getLunarDate() {
-      return festivallunarDate;
+      return lunarDate;
    }
    public String getFestivalLocation() {
       return festivalLocation;
@@ -22,7 +22,7 @@ public class Festival {
       return festivalName;
    }
    public String getRelatedFigure() {
-      return festivalrelatedFigure;
+      return relatedFigure;
    }
    
 }

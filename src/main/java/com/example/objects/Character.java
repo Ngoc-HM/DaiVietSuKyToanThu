@@ -1,68 +1,68 @@
 package com.example.objects;
 
 public class Character {
-   private String charactername;
-   private String characterlocation;
-   private String characterperiod;
-   private String characterdescription;
-   private String characterbornYear;
-   private String characterdiedYear;
+   private String name;
+   private String location;
+   private String period;
+   private String description;
+   private String bornYear;
+   private String diedYear;
 
    public Character(String name, String location, String period, String description, String bornYear, String diedYear) {
-      this.charactername = name;
-      this.characterlocation = location;
-      this.characterperiod = period;
-      this.characterdescription = description;
-      this.characterbornYear = bornYear;
-      this.characterdiedYear = diedYear;
+      this.name = name;
+      this.location = location;
+      this.period = period;
+      this.description = description;
+      this.bornYear = bornYear;
+      this.diedYear = diedYear;
    }
 
    public String getName() {
-      return charactername;
+      return name;
    }
 
    public void setName(String name) {
-      this.charactername = name;
+      this.name = name;
    }
 
    public String getLocation() {
-      return characterlocation;
+      return location;
    }
 
    public void setLocation(String location) {
-      this.characterlocation = location;
+      this.location = location;
    }
 
    public String getPeriod() {
-      return characterperiod;
+      return period;
    }
 
    public void setPeriod(String period) {
-      this.characterperiod = period;
+      this.period = period;
    }
 
    public String getDescription() {
-      return characterdescription;
+      return description;
    }
 
    public void setDescription(String description) {
-      this.characterdescription = description;
+      this.description = description;
    }
 
    public String getBornYear() {
-      return characterbornYear;
+      return bornYear;
    }
 
    public void setBornYear(String bornYear) {
-      this.characterbornYear = bornYear;
+      this.bornYear = bornYear;
    }
 
    public String getDiedYear() {
-      return characterdiedYear;
+      return diedYear;
    }
 
    public void setDiedYear(String diedYear) {
-      this.characterdiedYear = diedYear;
+      this.diedYear = diedYear;
    }
 
 }

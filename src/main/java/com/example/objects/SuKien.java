@@ -1,45 +1,45 @@
 package com.example.objects;
 
 public class SuKien {
-   private String eventname, eventcontent;
-   private String[] eventlocation, eventpeople;
+   private String name, content;
+   private String[] location, people;
 
    public SuKien(String name, String content, String[] location, String[] people) {
-      this.eventname = name;
-      this.eventcontent = content;
-      this.eventlocation = location;
-      this.eventpeople = people;
+      this.name = name;
+      this.content = content;
+      this.location = location;
+      this.people = people;
    }
 
    public String getName() {
-      return eventname;
+      return name;
    }
 
    public void setName(String name) {
-      this.eventname = name;
+      this.name = name;
    }
 
    public String getContent() {
-      return eventcontent;
+      return content;
    }
 
    public void setContent(String content) {
-      this.eventcontent = content;
+      this.content = content;
    }
 
    public String[] getLocation() {
-      return eventlocation;
+      return location;
    }
 
    public void setLocation(String[] location) {
-      this.eventlocation = location;
+      this.location = location;
    }
 
    public String[] getPeople() {
-      return eventpeople;
+      return people;
    }
 
    public void setPeople(String[] people) {
-      this.eventpeople = people;
+      this.people = people;
    }
 }
