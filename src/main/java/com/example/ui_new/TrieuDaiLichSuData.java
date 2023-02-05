@@ -25,9 +25,6 @@ import java.nio.file.Paths;
 import java.util.List;
 import java.util.ResourceBundle;
 
-import com.example.objects.Emperor;
-import com.example.objects.Relic;
-import com.example.objects.SuKien;
 import com.example.objects.TrieuDai;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;

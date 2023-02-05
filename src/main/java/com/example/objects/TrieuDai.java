@@ -5,10 +5,10 @@ public class TrieuDai {
    private String PeriodTime;
    private String PeriodPredecessor;
    private String PeriodSuccessor;
-   private String Capital;
-   private String FirstEmperor;
-   private String LastEmperor;
-   private String Religion;
+   private String periodCapital;
+   private String periodFirstEmperor;
+   private String periodLastEmperor;
+   private String periodReligion;
    public String getPeriodName() {
       return PeriodName;
    }
@@ -22,16 +22,16 @@ public class TrieuDai {
       return PeriodSuccessor;
    }
    public String getCapital() {
-      return Capital;
+      return periodCapital;
    }
    public String getFirstEmperor() {
-      return FirstEmperor;
+      return periodFirstEmperor;
    }
    public String getLastEmperor() {
-      return LastEmperor;
+      return periodLastEmperor;
    }
    public String getReligion() {
-      return Religion;
+      return periodReligion;
    }
 
 }
