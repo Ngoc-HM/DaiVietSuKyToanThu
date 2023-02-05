@@ -89,7 +89,6 @@ public class HelloController implements Initializable {
 
                 Media media = new Media(Paths.get("src/main/resources/assets/music/GiaiPhongMienNam.mp3").toUri().toString());
                 HelloApplication.mediaPlayer = new MediaPlayer(media);
-                HelloApplication.mediaPlayer.setAutoPlay(true);
 
             }
             case "Bác đang cùng chúng cháu hành quân" -> {
@@ -98,9 +97,10 @@ public class HelloController implements Initializable {
                 HelloApplication.mediaPlayer = new MediaPlayer(media);
             }
         }
-        HelloApplication.mediaPlayer.setAutoPlay(true);
+
         HelloApplication.mediaPlayer.setMute(false);
         HelloApplication.mediaPlayer.play();
+        HelloApplication.mediaPlayer.setAutoPlay(true);
     }
 
     @Override

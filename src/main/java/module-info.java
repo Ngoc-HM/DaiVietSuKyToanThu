@@ -9,6 +9,10 @@ module com.example.ui_new {
     requires javafx.web;
 
 
+
+
+
+
     opens com.example.ui_new to javafx.fxml;
     opens com.example.objects to com.google.gson;
     exports com.example.ui_new;
