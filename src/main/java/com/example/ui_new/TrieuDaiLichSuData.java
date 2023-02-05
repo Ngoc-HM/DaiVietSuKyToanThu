@@ -11,22 +11,61 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
-import javafx.scene.control.TextField;
+import javafx.scene.control.Label;
+// import javafx.scene.control.TextField;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.io.Reader;
 import java.net.URL;
+import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.List;
 import java.util.ResourceBundle;
+
+import com.example.objects.Emperor;
+import com.example.objects.Relic;
+import com.example.objects.SuKien;
+import com.example.objects.TrieuDai;
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 
 public class TrieuDaiLichSuData implements Initializable {
 
     @FXML
+    private Label CapitalLabel;
+
+    @FXML
+    private Label FirstEmperorLabel;
+
+    @FXML
+    private Button Intro;
+
+    @FXML
+    private Label LastEmperorLabel;
+
+    @FXML
+    private Label PeriodNameLabel;
+
+    @FXML
+    private Label PeriodPredecessorLabel;
+
+    @FXML
+    private Label PeriodSuccessorLabel;
+
+    @FXML
+    private Label PeriodTimeLabel;
+
+    @FXML
+    private Label ReligionLabel;
+
+    @FXML
     public ComboBox<String> ListMusic;
     @FXML
-    public Button Introl ;
+    public Button Introl;
+
     public void IntrolAction(ActionEvent event) throws IOException {
         try {
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -41,39 +80,44 @@ public class TrieuDaiLichSuData implements Initializable {
         }
     }
 
-
     @FXML
     public Button tang, giam;
+
     public void tangAction(ActionEvent event) throws IOException {
-        if(HelloApplication.mediaPlayer.getVolume() < 1.0)
+        if (HelloApplication.mediaPlayer.getVolume() < 1.0)
             HelloApplication.mediaPlayer.setVolume(HelloApplication.mediaPlayer.getVolume() + 0.1);
     }
+
     public void giamAction(ActionEvent event) throws IOException {
-        if(HelloApplication.mediaPlayer.getVolume() > 0)
+        if (HelloApplication.mediaPlayer.getVolume() > 0)
             HelloApplication.mediaPlayer.setVolume(HelloApplication.mediaPlayer.getVolume() - 0.1);
     }
 
     ObservableList<String> list = FXCollections.observableArrayList("Kitaro - KOI",
             "Kitaro - Matsuri", "Nhạc baroque không lời ", "Dòng máu lạc hồng", "Giải phóng Miền Nam",
             "Đoàn vệ quốc quân", "Bác đang cùng chúng cháu hành quân", "Hào khí Việt Nam", "Hát Mãi Khúc Quân Hành");
-    public void comboBoxOnAction (ActionEvent event){
-        System.out.println( "Nhạc : " + ListMusic.getValue() );
+
+    public void comboBoxOnAction(ActionEvent event) {
+        System.out.println("Nhạc : " + ListMusic.getValue());
         String trunggian = ListMusic.getValue();
         HelloApplication.mediaPlayer.stop();
         switch (trunggian) {
             case "Hát Mãi Khúc Quân Hành" -> {
                 HelloApplication.mediaPlayer.stop();
-                Media media = new Media(Paths.get("src/main/resources/assets/music/HatMaiKhucQuanHanh.mp3").toUri().toString());
+                Media media = new Media(
+                        Paths.get("src/main/resources/assets/music/HatMaiKhucQuanHanh.mp3").toUri().toString());
                 HelloApplication.mediaPlayer = new MediaPlayer(media);
             }
             case "Đoàn vệ quốc quân" -> {
                 HelloApplication.mediaPlayer.stop();
-                Media media = new Media(Paths.get("src/main/resources/assets/music/DoanveQuocQuan.mp3").toUri().toString());
+                Media media = new Media(
+                        Paths.get("src/main/resources/assets/music/DoanveQuocQuan.mp3").toUri().toString());
                 HelloApplication.mediaPlayer = new MediaPlayer(media);
             }
             case "Hào khí Việt Nam" -> {
                 HelloApplication.mediaPlayer.stop();
-                Media media = new Media(Paths.get("src/main/resources/assets/music/HaoKhiVietNam.mp3").toUri().toString());
+                Media media = new Media(
+                        Paths.get("src/main/resources/assets/music/HaoKhiVietNam.mp3").toUri().toString());
                 HelloApplication.mediaPlayer = new MediaPlayer(media);
 
             }
@@ -90,24 +134,28 @@ public class TrieuDaiLichSuData implements Initializable {
             }
             case "Nhạc baroque không lời " -> {
                 HelloApplication.mediaPlayer.stop();
-                Media media = new Media(Paths.get("src/main/resources/assets/music/NhacKhongLoi.mp3").toUri().toString());
+                Media media = new Media(
+                        Paths.get("src/main/resources/assets/music/NhacKhongLoi.mp3").toUri().toString());
                 HelloApplication.mediaPlayer = new MediaPlayer(media);
             }
             case "Dòng máu lạc hồng" -> {
 
-                Media media = new Media(Paths.get("src/main/resources/assets/music/DongMauLacHong.mp3").toUri().toString());
+                Media media = new Media(
+                        Paths.get("src/main/resources/assets/music/DongMauLacHong.mp3").toUri().toString());
                 HelloApplication.mediaPlayer = new MediaPlayer(media);
 
             }
             case "Giải phóng Miền Nam" -> {
 
-                Media media = new Media(Paths.get("src/main/resources/assets/music/GiaiPhongMienNam.mp3").toUri().toString());
+                Media media = new Media(
+                        Paths.get("src/main/resources/assets/music/GiaiPhongMienNam.mp3").toUri().toString());
                 HelloApplication.mediaPlayer = new MediaPlayer(media);
 
             }
             case "Bác đang cùng chúng cháu hành quân" -> {
 
-                Media media = new Media(Paths.get("src/main/resources/assets/music/BacDangCungChungChauHanhQuan.mp3").toUri().toString());
+                Media media = new Media(Paths.get("src/main/resources/assets/music/BacDangCungChungChauHanhQuan.mp3")
+                        .toUri().toString());
                 HelloApplication.mediaPlayer = new MediaPlayer(media);
             }
         }
@@ -115,13 +163,55 @@ public class TrieuDaiLichSuData implements Initializable {
         HelloApplication.mediaPlayer.setMute(false);
         HelloApplication.mediaPlayer.play();
     }
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        try {
+            Reader reader = Files.newBufferedReader(Paths.get("src\\main\\resources\\json\\Period_fix.json"));
+            List<TrieuDai> periods = new Gson().fromJson(reader, new TypeToken<List<TrieuDai>>() {
+            }.getType());
+            int i = 0;
+            boolean found = false;
+            if (!TrieuDaiLichSu.searchString.equals(""))
+                for (; i < periods.size(); i++) {
+                    String name = periods.get(i).getPeriodName().toUpperCase();
+                    if (name.contains(TrieuDaiLichSu.searchString)) {
+                        found = true;
+                        break;
+                    }
+                }
+            if (found) {
+                CapitalLabel.setText(periods.get(i).getCapital());
+                FirstEmperorLabel.setText(periods.get(i).getFirstEmperor());
+                LastEmperorLabel.setText(periods.get(i).getLastEmperor());
+                PeriodNameLabel.setText(periods.get(i).getPeriodName());
+                PeriodPredecessorLabel.setText(periods.get(i).getPeriodPredecessor());
+                PeriodSuccessorLabel.setText(periods.get(i).getPeriodSuccessor());
+                PeriodTimeLabel.setText(periods.get(i).getPeriodTime());
+                ReligionLabel.setText(periods.get(i).getReligion());
+            } else {
+                CapitalLabel.setText("Không rõ");
+                FirstEmperorLabel.setText("Không rõ");
+                LastEmperorLabel.setText("Không rõ");
+                PeriodNameLabel.setText("Không rõ");
+                PeriodPredecessorLabel.setText("Không rõ");
+                PeriodSuccessorLabel.setText("Không rõ");
+                PeriodTimeLabel.setText("Không rõ");
+                ReligionLabel.setText("Không rõ");
+            }
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+
         ListMusic.setItems(list);
     }
+
     @FXML
-    // Khi nhan nut Trieu đai lich su thì hien thi man hinh tim kiem trieu dai lich su
-    public Button TrieuDaiLichSu;
+    // Khi nhan nut Trieu đai lich su thì hien thi man hinh tim kiem trieu dai lich
+    // su
+    public Button TrieuDaiLichSuBtn;
+
     public void TrieuDaiLichSuAction(ActionEvent event) throws IOException {
         try {
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -138,6 +228,7 @@ public class TrieuDaiLichSuData implements Initializable {
 
     @FXML
     public Button HuyenSuCacViVua;
+
     public void HuyenSuCacViVuaAction(ActionEvent event) {
         try {
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -150,8 +241,10 @@ public class TrieuDaiLichSuData implements Initializable {
             e.printStackTrace();
         }
     }
+
     @FXML
     public Button TraCuuLeHoi;
+
     public void TraCuuLeHoiAction(ActionEvent event) {
         try {
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -167,6 +260,7 @@ public class TrieuDaiLichSuData implements Initializable {
 
     @FXML
     public Button DiaDiemDiTich;
+
     public void DiaDiemDiTichAction(ActionEvent event) {
         try {
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -180,8 +274,10 @@ public class TrieuDaiLichSuData implements Initializable {
         }
         // tạo ra 1 màn hình mới
     }
+
     @FXML
     public Button SuKienLichSuVietNam;
+
     public void SuKienLichSuVietNamAction(ActionEvent event) {
         try {
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -198,8 +294,9 @@ public class TrieuDaiLichSuData implements Initializable {
 
     @FXML
     public Button DarkMode;
+
     // khi ấn nút DarkMode thì đưa ra màn hình ErrorScreen
-    public void DarkModeAction(ActionEvent event)  throws IOException {
+    public void DarkModeAction(ActionEvent event) throws IOException {
         try {
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
@@ -215,7 +312,8 @@ public class TrieuDaiLichSuData implements Initializable {
 
     @FXML
     public Button DenVang;
-    public void DenVangAction(ActionEvent event)  throws IOException {
+
+    public void DenVangAction(ActionEvent event) throws IOException {
         try {
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
@@ -228,17 +326,20 @@ public class TrieuDaiLichSuData implements Initializable {
             e.printStackTrace();
         }
     }
+
     // biến tắt nhạc
     @FXML
     public Button TatNhac; // id
 
     // on Action
-    public void TatNhacAction(ActionEvent event)  throws IOException {
+    public void TatNhacAction(ActionEvent event) throws IOException {
         // mở ra màn hình ErrorScreen
-        if(HelloApplication.mediaPlayer.getStatus() == MediaPlayer.Status.PLAYING) {
+        if (HelloApplication.mediaPlayer.getStatus() == MediaPlayer.Status.PLAYING) {
             HelloApplication.mediaPlayer.pause();
-        }else HelloApplication.mediaPlayer.play();
+        } else
+            HelloApplication.mediaPlayer.play();
     }
+
     @FXML
     public Button NextWeb;
 
@@ -257,6 +358,7 @@ public class TrieuDaiLichSuData implements Initializable {
 
     @FXML
     public Button GoBack;
+
     public void GoBackAction(ActionEvent event) throws IOException {
         try {
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -270,14 +372,15 @@ public class TrieuDaiLichSuData implements Initializable {
         }
     }
 
-    @FXML
-    public Button TimKiem;
-    @FXML
-    public TextField Search;
-    public void TimKiemAction(ActionEvent event) throws IOException {
-        System.out.println(Search.getText());
-    }
+    // @FXML
+    // public Button TimKiem;
+    // @FXML
+    // public TextField Search;
 
-
+    // @FXML
+    // public void TimKiemAction(ActionEvent event) throws IOException {
+    // System.out.println("Hello");
+    // System.out.println(Search.getText());
+    // }
 
 }

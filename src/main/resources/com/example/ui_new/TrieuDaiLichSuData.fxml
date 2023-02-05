@@ -63,7 +63,7 @@
                </children>
             </HBox>
             <Button fx:id="Intro" mnemonicParsing="false" onAction="#IntrolAction" prefHeight="65.0" prefWidth="307.0" text="Giới Thiệu" />
-            <Button fx:id="TrieuDaiLichSu" mnemonicParsing="false" onAction="#TrieuDaiLichSuAction" prefHeight="65.0" prefWidth="307.0" text="Triều Đại Lịch Sử" />
+            <Button fx:id="TrieuDaiLichSuBtn" mnemonicParsing="false" onAction="#TrieuDaiLichSuAction" prefHeight="65.0" prefWidth="307.0" text="Triều Đại Lịch Sử" />
             <Button fx:id="HuyenSuCacViVua" mnemonicParsing="false" onAction="#HuyenSuCacViVuaAction" prefHeight="65.0" prefWidth="307.0" text="Huyền Sử Các Vị Vua" />
             <Button fx:id="TraCuuLeHoi" mnemonicParsing="false" onAction="#TraCuuLeHoiAction" prefHeight="65.0" prefWidth="307.0" text="Tra Cứu Lễ Hội" />
             <Button fx:id="SuKienLichSuVietNam" mnemonicParsing="false" onAction="#SuKienLichSuVietNamAction" prefHeight="65.0" prefWidth="307.0" text="Sự Kiện Lịch Sử Việt Nam " />
@@ -100,12 +100,12 @@
                   <Font size="18.0" />
                </font>
             </Label>
-            <Label layoutX="550.0" layoutY="140.0" text="Không rõ">
+            <Label fx:id="PeriodNameLabel" layoutX="550.0" layoutY="140.0" text="Không rõ">
                <font>
                   <Font size="18.0" />
                </font>
             </Label>
-            <Label layoutX="550.0" layoutY="300.0" text="Không rõ">
+            <Label fx:id="CapitalLabel" layoutX="550.0" layoutY="300.0" text="Không rõ">
                <font>
                   <Font size="18.0" />
                </font>
@@ -130,7 +130,7 @@
                   <Font size="18.0" />
                </font>
             </Label>
-            <Label layoutX="550.0" layoutY="260.0" text="Không rõ">
+            <Label fx:id="PeriodSuccessorLabel" layoutX="550.0" layoutY="260.0" text="Không rõ">
                <font>
                   <Font size="18.0" />
                </font>
@@ -145,27 +145,27 @@
                   <Font size="18.0" />
                </font>
             </Label>
-            <Label layoutX="550.0" layoutY="180.0" text="Không rõ">
+            <Label fx:id="PeriodTimeLabel" layoutX="550.0" layoutY="180.0" text="Không rõ">
                <font>
                   <Font size="18.0" />
                </font>
             </Label>
-            <Label layoutX="550.0" layoutY="220.0" text="Không rõ">
+            <Label fx:id="FirstEmperorLabel" layoutX="550.0" layoutY="340.0" text="Không rõ">
                <font>
                   <Font size="18.0" />
                </font>
             </Label>
-            <Label layoutX="550.0" layoutY="340.0" text="Không rõ">
+            <Label fx:id="LastEmperorLabel" layoutX="550.0" layoutY="380.0" text="Không rõ">
                <font>
                   <Font size="18.0" />
                </font>
             </Label>
-            <Label layoutX="550.0" layoutY="380.0" text="Không rõ">
+            <Label fx:id="ReligionLabel" layoutX="550.0" layoutY="420.0" text="Không rõ">
                <font>
                   <Font size="18.0" />
                </font>
             </Label>
-            <Label layoutX="550.0" layoutY="420.0" text="Không rõ">
+            <Label fx:id="PeriodPredecessorLabel" layoutX="550.0" layoutY="220.0" text="Không rõ">
                <font>
                   <Font size="18.0" />
                </font>
