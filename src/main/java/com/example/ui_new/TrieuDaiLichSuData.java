@@ -162,6 +162,7 @@ public class TrieuDaiLichSuData implements Initializable {
         HelloApplication.mediaPlayer.setAutoPlay(true);
         HelloApplication.mediaPlayer.setMute(false);
         HelloApplication.mediaPlayer.play();
+        HelloApplication.mediaPlayer.setCycleCount(MediaPlayer.INDEFINITE);
     }
 
     @Override

@@ -24,6 +24,7 @@ public class HelloApplication extends Application {
         // Phát nhạc hào khí Việt Nam
         mediaPlayer.setMute(false);
         mediaPlayer.play();
+        mediaPlayer.setCycleCount(MediaPlayer.INDEFINITE);
         mediaPlayer.setAutoPlay(true);
 
         // chạy cửa sổ menu

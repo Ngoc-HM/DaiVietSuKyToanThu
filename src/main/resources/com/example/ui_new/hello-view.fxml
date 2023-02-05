@@ -84,6 +84,18 @@
             <Image url="@../../../assets/image/DaiVietSuKyToanThukanji.png" />
          </image>
       </ImageView>
-      <AnchorPane layoutX="257.0" layoutY="98.0" prefHeight="678.0" prefWidth="975.0" />
+      <AnchorPane layoutX="257.0" layoutY="98.0" prefHeight="547.0" prefWidth="975.0">
+         <children>
+            <ImageView fitHeight="600.0" fitWidth="423.0" layoutX="37.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../assets/image/images.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="419.0" fitWidth="468.0" layoutX="491.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../assets/image/i1.jpg" />
+               </image>
+            </ImageView>
+         </children></AnchorPane>
    </children>
 </AnchorPane>

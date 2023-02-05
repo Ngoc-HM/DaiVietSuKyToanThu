@@ -112,6 +112,7 @@ public class ErrorScreen  implements Initializable {
         HelloApplication.mediaPlayer.setAutoPlay(true);
         HelloApplication.mediaPlayer.setMute(false);
         HelloApplication.mediaPlayer.play();
+        HelloApplication.mediaPlayer.setCycleCount(MediaPlayer.INDEFINITE);
     }
     @Override
     public void initialize(URL location, ResourceBundle resources) {

@@ -101,6 +101,7 @@ public class HelloController implements Initializable {
         HelloApplication.mediaPlayer.setMute(false);
         HelloApplication.mediaPlayer.play();
         HelloApplication.mediaPlayer.setAutoPlay(true);
+        HelloApplication.mediaPlayer.setCycleCount(MediaPlayer.INDEFINITE);
     }
 
     @Override
