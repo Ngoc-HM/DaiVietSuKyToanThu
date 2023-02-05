@@ -41,12 +41,22 @@ public class HelloController implements Initializable {
 
     ObservableList<String> list = FXCollections.observableArrayList("Kitaro - KOI",
             "Kitaro - Matsuri", "Nhạc baroque không lời ", "Dòng máu lạc hồng", "Giải phóng Miền Nam",
-            "Đoàn vệ quốc quân", "Bác đang cùng chúng cháu hành quân", "Hào khí Việt Nam");
+            "Đoàn vệ quốc quân", "Bác đang cùng chúng cháu hành quân", "Hào khí Việt Nam", "Hát Mãi Khúc Quân Hành");
     public void comboBoxOnAction (ActionEvent event){
         System.out.println( "Nhạc : " + ListMusic.getValue() );
         String trunggian = ListMusic.getValue();
         HelloApplication.mediaPlayer.stop();
         switch (trunggian) {
+            case "Hát Mãi Khúc Quân Hành" -> {
+                HelloApplication.mediaPlayer.stop();
+                Media media = new Media(Paths.get("src/main/resources/assets/music/HatMaiKhucQuanHanh.mp3").toUri().toString());
+                HelloApplication.mediaPlayer = new MediaPlayer(media);
+            }
+            case "Đoàn vệ quốc quân" -> {
+                HelloApplication.mediaPlayer.stop();
+                Media media = new Media(Paths.get("src/main/resources/assets/music/DoanveQuocQuan.mp3").toUri().toString());
+                HelloApplication.mediaPlayer = new MediaPlayer(media);
+            }
             case "Hào khí Việt Nam" -> {
                 HelloApplication.mediaPlayer.stop();
                 Media media = new Media(Paths.get("src/main/resources/assets/music/HaoKhiVietNam.mp3").toUri().toString());
@@ -79,6 +89,7 @@ public class HelloController implements Initializable {
 
                 Media media = new Media(Paths.get("src/main/resources/assets/music/GiaiPhongMienNam.mp3").toUri().toString());
                 HelloApplication.mediaPlayer = new MediaPlayer(media);
+                HelloApplication.mediaPlayer.setAutoPlay(true);
 
             }
             case "Bác đang cùng chúng cháu hành quân" -> {

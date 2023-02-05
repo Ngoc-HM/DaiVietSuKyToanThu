@@ -6,6 +6,7 @@ module com.example.ui_new {
     requires json.simple;
     requires gson;
     requires java.sql;
+    requires javafx.web;
 
 
     opens com.example.ui_new to javafx.fxml;

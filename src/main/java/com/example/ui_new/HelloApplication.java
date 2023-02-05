@@ -18,7 +18,7 @@ public class HelloApplication extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-        Media media = new Media(Paths.get("src/main/resources/assets/music/HaoKhiVietNam.mp3").toUri().toString());
+        Media media = new Media(Paths.get("src/main/resources/assets/music/Conginuadau.mp3").toUri().toString());
         mediaPlayer = new MediaPlayer(media);
         // Phát nhạc hào khí Việt Nam
         mediaPlayer.setAutoPlay(true);

@@ -12,11 +12,13 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
+import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
+import java.nio.file.Paths;
 import java.util.ResourceBundle;
 
 public class HuyenSuCacViVua implements Initializable {
@@ -40,11 +42,79 @@ public class HuyenSuCacViVua implements Initializable {
         }
     }
 
-    ObservableList<String> list = FXCollections.observableArrayList("Kitaro - KOI", "Kitaro - Matsuri", "Nhạc baroque không lời ", "Dòng máu lạc hồng", "Giải phóng Miền Nam", "Đoàn vệ quốc quân", "Bác đang cùng chúng cháu hành quân", "Hào khí Việt Nam");
-    public void comboBoxOnAction (ActionEvent event){
-        System.out.println( "Nhạc : " + ListMusic.getValue() );
+    @FXML
+    public Button tang, giam;
+    public void tangAction(ActionEvent event) throws IOException {
+        if(HelloApplication.mediaPlayer.getVolume() < 1.0)
+            HelloApplication.mediaPlayer.setVolume(HelloApplication.mediaPlayer.getVolume() + 0.1);
+    }
+    public void giamAction(ActionEvent event) throws IOException {
+        if(HelloApplication.mediaPlayer.getVolume() > 0)
+            HelloApplication.mediaPlayer.setVolume(HelloApplication.mediaPlayer.getVolume() - 0.1);
     }
 
+    ObservableList<String> list = FXCollections.observableArrayList("Kitaro - KOI",
+            "Kitaro - Matsuri", "Nhạc baroque không lời ", "Dòng máu lạc hồng", "Giải phóng Miền Nam",
+            "Đoàn vệ quốc quân", "Bác đang cùng chúng cháu hành quân", "Hào khí Việt Nam", "Hát Mãi Khúc Quân Hành");
+    public void comboBoxOnAction (ActionEvent event){
+        System.out.println( "Nhạc : " + ListMusic.getValue() );
+        String trunggian = ListMusic.getValue();
+        HelloApplication.mediaPlayer.stop();
+        switch (trunggian) {
+            case "Hát Mãi Khúc Quân Hành" -> {
+                HelloApplication.mediaPlayer.stop();
+                Media media = new Media(Paths.get("src/main/resources/assets/music/HatMaiKhucQuanHanh.mp3").toUri().toString());
+                HelloApplication.mediaPlayer = new MediaPlayer(media);
+            }
+            case "Đoàn vệ quốc quân" -> {
+                HelloApplication.mediaPlayer.stop();
+                Media media = new Media(Paths.get("src/main/resources/assets/music/DoanveQuocQuan.mp3").toUri().toString());
+                HelloApplication.mediaPlayer = new MediaPlayer(media);
+            }
+            case "Hào khí Việt Nam" -> {
+                HelloApplication.mediaPlayer.stop();
+                Media media = new Media(Paths.get("src/main/resources/assets/music/HaoKhiVietNam.mp3").toUri().toString());
+                HelloApplication.mediaPlayer = new MediaPlayer(media);
+
+            }
+            case "Kitaro - KOI" -> {
+                HelloApplication.mediaPlayer.stop();
+                Media media = new Media(Paths.get("src/main/resources/assets/music/KOI.mp3").toUri().toString());
+                HelloApplication.mediaPlayer = new MediaPlayer(media);
+            }
+            case "Kitaro - Matsuri" -> {
+                HelloApplication.mediaPlayer.stop();
+                Media media = new Media(Paths.get("src/main/resources/assets/music/Matsuri.mp3").toUri().toString());
+                HelloApplication.mediaPlayer = new MediaPlayer(media);
+
+            }
+            case "Nhạc baroque không lời " -> {
+                HelloApplication.mediaPlayer.stop();
+                Media media = new Media(Paths.get("src/main/resources/assets/music/NhacKhongLoi.mp3").toUri().toString());
+                HelloApplication.mediaPlayer = new MediaPlayer(media);
+            }
+            case "Dòng máu lạc hồng" -> {
+
+                Media media = new Media(Paths.get("src/main/resources/assets/music/DongMauLacHong.mp3").toUri().toString());
+                HelloApplication.mediaPlayer = new MediaPlayer(media);
+
+            }
+            case "Giải phóng Miền Nam" -> {
+
+                Media media = new Media(Paths.get("src/main/resources/assets/music/GiaiPhongMienNam.mp3").toUri().toString());
+                HelloApplication.mediaPlayer = new MediaPlayer(media);
+
+            }
+            case "Bác đang cùng chúng cháu hành quân" -> {
+
+                Media media = new Media(Paths.get("src/main/resources/assets/music/BacDangCungChungChauHanhQuan.mp3").toUri().toString());
+                HelloApplication.mediaPlayer = new MediaPlayer(media);
+            }
+        }
+        HelloApplication.mediaPlayer.setAutoPlay(true);
+        HelloApplication.mediaPlayer.setMute(false);
+        HelloApplication.mediaPlayer.play();
+    }
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         ListMusic.setItems(list);

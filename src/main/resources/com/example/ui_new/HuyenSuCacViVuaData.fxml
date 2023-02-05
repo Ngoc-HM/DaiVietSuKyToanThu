@@ -27,7 +27,35 @@
                     </children>
                 </AnchorPane>
                 <ComboBox fx:id="ListMusic" onAction="#comboBoxOnAction" prefHeight="34.0" prefWidth="227.0" promptText="Chọn nhạc..." />
-                <Button fx:id="TatNhac" mnemonicParsing="false" onAction="#TatNhacAction" prefHeight="46.0" prefWidth="227.0" text="Tắt/Bật Nhạc" />
+                <HBox prefHeight="49.0" prefWidth="227.0">
+                    <children>
+                        <Button fx:id="TatNhac" mnemonicParsing="false" onAction="#TatNhacAction" prefHeight="56.0" prefWidth="138.0" text="Tắt/Bật Nhạc" />
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                            <children>
+                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                    <children>
+                                        <Button fx:id="tang" mnemonicParsing="false" onAction="#tangAction" prefHeight="25.0" prefWidth="79.0" text="Tăng" />
+                                        <ImageView fitHeight="23.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@../../../assets/image/amluongmax.png" />
+                                            </image>
+                                        </ImageView>
+                                    </children>
+                                </HBox>
+                                <HBox prefHeight="0.0" prefWidth="89.0">
+                                    <children>
+                                        <Button fx:id="giam" mnemonicParsing="false" onAction="#giamAction" prefHeight="26.0" prefWidth="75.0" text="Giảm" />
+                                        <ImageView fitHeight="25.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@../../../assets/image/amluongmin.png" />
+                                            </image>
+                                        </ImageView>
+                                    </children>
+                                </HBox>
+                            </children>
+                        </VBox>
+                    </children>
+                </HBox>
                 <HBox prefHeight="47.0" prefWidth="227.0">
                     <children>
                         <Button fx:id="DarkMode" mnemonicParsing="false" onAction="#DarkModeAction" prefHeight="46.0" prefWidth="110.0" text="DarkMode" />

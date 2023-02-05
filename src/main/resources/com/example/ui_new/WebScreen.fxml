@@ -93,13 +93,13 @@
             <HBox prefHeight="34.0" prefWidth="975.0">
                <children>
                   <Button mnemonicParsing="false" prefHeight="34.0" prefWidth="17.0" style="-fx-background-color: #fff;" />
-                  <Button fx:id="Back" mnemonicParsing="false" prefHeight="34.0" prefWidth="67.0" text="Back" />
+                  <Button mnemonicParsing="false" prefHeight="34.0" prefWidth="67.0" text="Back" />
                   <Button mnemonicParsing="false" prefHeight="34.0" prefWidth="17.0" style="-fx-background-color: #fff;" />
                   <Button mnemonicParsing="false" prefHeight="34.0" prefWidth="70.0" text="Reload" />
                   <Button mnemonicParsing="false" prefHeight="34.0" prefWidth="17.0" style="-fx-background-color: #fff;" />
                   <Button mnemonicParsing="false" prefHeight="34.0" prefWidth="63.0" text="Forward" />
                   <Button mnemonicParsing="false" prefHeight="34.0" prefWidth="17.0" style="-fx-background-color: #fff;" />
-                  <TextField fx:id="textURL" prefHeight="34.0" prefWidth="514.0" promptText="URL..." />
+                  <TextField fx:id="addressBar" alignment="CENTER" onKeyPressed="#keyHandle" prefHeight="34.0" prefWidth="514.0" promptText="URL..." />
                   <Button mnemonicParsing="false" prefHeight="34.0" prefWidth="17.0" style="-fx-background-color: #fff;" />
                   <Button mnemonicParsing="false" prefHeight="34.0" prefWidth="78.0" text="Zoom In" />
                   <Button mnemonicParsing="false" prefHeight="34.0" prefWidth="17.0" style="-fx-background-color: #fff;" />
@@ -108,9 +108,16 @@
             </HBox>
             <VBox layoutY="34.0" prefHeight="628.0" prefWidth="975.0">
                <children>
-                  <ProgressBar prefHeight="13.0" prefWidth="975.0" progress="0.0" />
-                 <!-- <WebView prefHeight="613.0" prefWidth="975.0" /> -->
-                  <Button mnemonicParsing="false" prefHeight="34.0" prefWidth="17.0" style="-fx-background-color: #fff;" />
+                  <ProgressBar prefHeight="34.0" prefWidth="975.0" progress="0.0" />
+                  <AnchorPane prefHeight="595.0" prefWidth="975.0">
+                     <children>
+                        <ImageView fitHeight="589.0" fitWidth="924.0" layoutX="79.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../assets/image/google.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
                </children>
             </VBox>
          </children></AnchorPane>

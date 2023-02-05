@@ -13,11 +13,14 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.ProgressBar;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
+import javafx.scene.web.WebEngine;
+import javafx.scene.web.WebView;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -52,10 +55,21 @@ public class WebScreen implements Initializable {
         String trunggian = ListMusic.getValue();
         HelloApplication.mediaPlayer.stop();
         switch (trunggian) {
+            case "Hát Mãi Khúc Quân Hành" -> {
+                HelloApplication.mediaPlayer.stop();
+                Media media = new Media(Paths.get("src/main/resources/assets/music/HatMaiKhucQuanHanh.mp3").toUri().toString());
+                HelloApplication.mediaPlayer = new MediaPlayer(media);
+            }
+            case "Đoàn vệ quốc quân" -> {
+                HelloApplication.mediaPlayer.stop();
+                Media media = new Media(Paths.get("src/main/resources/assets/music/DoanveQuocQuan.mp3").toUri().toString());
+                HelloApplication.mediaPlayer = new MediaPlayer(media);
+            }
             case "Hào khí Việt Nam" -> {
                 HelloApplication.mediaPlayer.stop();
                 Media media = new Media(Paths.get("src/main/resources/assets/music/HaoKhiVietNam.mp3").toUri().toString());
                 HelloApplication.mediaPlayer = new MediaPlayer(media);
+
             }
             case "Kitaro - KOI" -> {
                 HelloApplication.mediaPlayer.stop();
@@ -250,6 +264,29 @@ public class WebScreen implements Initializable {
             e.printStackTrace();
         }
     }
+    @FXML
+    public WebView webView;
+    @FXML
+    public TextField addressBar;
+
+    public WebEngine engine;
+    public void keyHandle(KeyEvent event) {
+        try{
+        if(event.getCode().equals(KeyCode.ENTER) ) {
+            engine.load(addressBar.getText());
+        }
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+
+    }
+
+
+
+
+
+
+
 
 
 
