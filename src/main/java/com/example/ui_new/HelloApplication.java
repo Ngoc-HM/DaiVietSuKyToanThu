@@ -19,21 +19,19 @@ public class HelloApplication extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-        Media media = new Media(Paths.get("src/main/resources/assets/music/Conginuadau.mp3").toUri().toString());
+        Media media = new Media(Paths.get("src/main/resources/assets/music/HaoKhiVietNam.mp3").toUri().toString());
         mediaPlayer = new MediaPlayer(media);
         // Phát nhạc hào khí Việt Nam
         mediaPlayer.setMute(false);
         mediaPlayer.play();
         mediaPlayer.setCycleCount(MediaPlayer.INDEFINITE);
         mediaPlayer.setAutoPlay(true);
-
         // chạy cửa sổ menu
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         stage.setTitle("Đại Việt Sử Ký Toàn Thư - Project Lập Trình Hướng Đối Tượng !");
         Image icon = new Image(Paths.get("src/main/resources/assets/image/app.png").toUri().toString());
         stage.getIcons().add(icon);
-
         stage.setScene(scene);
         stage.show();
     }
