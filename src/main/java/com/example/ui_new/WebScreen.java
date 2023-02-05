@@ -23,11 +23,14 @@ import javafx.scene.web.WebEngine;
 import javafx.scene.web.WebView;
 import javafx.stage.Stage;
 
+import java.awt.*;
 import java.io.IOException;
-import java.net.MalformedURLException;
-import java.net.URL;
+import java.io.UnsupportedEncodingException;
+import java.net.*;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.Paths;
 import java.util.ResourceBundle;
+import java.util.Scanner;
 
 import static com.example.ui_new.HelloApplication.mediaPlayer;
 
@@ -270,29 +273,20 @@ public class WebScreen implements Initializable {
     @FXML
     public TextField addressBar;
 
-    public WebEngine engine;
-    public void keyHandle(KeyEvent event) {
-        try{
-        if(event.getCode().equals(KeyCode.ENTER) ) {
-            engine.load(addressBar.getText());
+
+
+    public void onactionweb(ActionEvent actionEvent) {
+        Scanner scanner = new Scanner(System.in);
+
+        String encodedQuery = URLEncoder.encode(String.valueOf(addressBar.getText()), StandardCharsets.UTF_8);
+
+        if (Desktop.isDesktopSupported() && Desktop.getDesktop().isSupported(Desktop.Action.BROWSE)) {
+            try {
+                Desktop.getDesktop().browse(new URI("https://www.google.com/search?q=" + encodedQuery));
+            } catch (IOException | URISyntaxException e) {
+                e.printStackTrace();
+            }
         }
-    } catch (Exception e) {
-        e.printStackTrace();
-    }
 
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
