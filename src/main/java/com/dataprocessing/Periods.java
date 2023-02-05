@@ -2,6 +2,8 @@ package com.dataprocessing;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -14,16 +16,20 @@ import org.json.simple.parser.ParseException;
 
 public class Periods implements Serializable{
 	int id;
-	String PeriodName;
-	String PeriodTime;
-	Periods PeriodPredecessor;
-	Periods PeriodSuccessor;
-	String Capital;
-    String FirstEmperor;
-    Characters LastEmperor;
-    String Religion;
+	String periodName;
+	String periodTime;
+	Periods periodPredecessor;
+	Periods periodSuccessor;
+	String periodCapital;
+    Characters periodFirstEmperor;
+    Characters periodLastEmperor;
+    String periodReligion;
 	
 	public static ArrayList<Periods> periodsList = new ArrayList<Periods>();
+	
+	public static ArrayList<Periods> getPeriodsList() {
+		return periodsList;
+	}
 
     public int getId() {
 		return id;
@@ -34,89 +40,67 @@ public class Periods implements Serializable{
 	}
 
 	public String getPeriodName() {
-		return PeriodName;
+		return periodName;
 	}
 
 	public void setPeriodName(String periodName) {
-		PeriodName = periodName;
+		this.periodName = periodName;
 	}
 
 	public String getPeriodTime() {
-		return PeriodTime;
+		return periodTime;
 	}
 
 	public void setPeriodTime(String periodTime) {
-		PeriodTime = periodTime;
+		this.periodTime = periodTime;
 	}
 
 	public Periods getPeriodPredecessor() {
-		return PeriodPredecessor;
+		return periodPredecessor;
 	}
 
 	public void setPeriodPredecessor(Periods periodPredecessor) {
-		PeriodPredecessor = periodPredecessor;
+		this.periodPredecessor = periodPredecessor;
 	}
 
 	public Periods getPeriodSuccessor() {
-		return PeriodSuccessor;
+		return periodSuccessor;
 	}
 
 	public void setPeriodSuccessor(Periods periodSuccessor) {
-		PeriodSuccessor = periodSuccessor;
+		this.periodSuccessor = periodSuccessor;
 	}
 
-	public String getCapital() {
-		return Capital;
+	public String getPeriodCapital() {
+		return periodCapital;
 	}
 
-	public void setCapital(String capital) {
-		Capital = capital;
+	public void setPeriodCapital(String periodCapital) {
+		this.periodCapital = periodCapital;
 	}
 
-	public String getFirstEmperor() {
-		return FirstEmperor;
+	public Characters getPeriodFirstEmperor() {
+		return periodFirstEmperor;
 	}
 
-	public static String matchingName(String name){
-		Characters wanted = null;
-		for (Characters ch : Characters.charactersList) {
-            if (ch.getName().contains(name)){
-            	wanted = ch;
-            	break;
-            }
-        }
-        return String.valueOf(wanted);
-    }
-	
-	/*
-	public void setFirstEmperor(String firstEmperorName) {
-		//FirstEmperor = firstEmperor;
-		int i = matchingName(firstEmperorName);
-
-		FirstEmperor.setName(Characters.charactersList.get(i).getName());
-		FirstEmperor.setPeriod(Characters.charactersList.get(i).getPeriod());
-		FirstEmperor.setBornYear(Characters.charactersList.get(i).getBornYear());
-	}
-	*/
-	
-	public void setFirstEmperor(String firstEmperor) {
-		FirstEmperor = firstEmperor;
+	public void setPeriodFirstEmperor(Characters periodFirstEmperor) {
+		this.periodFirstEmperor = periodFirstEmperor;
 	}
 
-	public Characters getLastEmperor() {
-		return LastEmperor;
+	public Characters getPeriodLastEmperor() {
+		return periodLastEmperor;
 	}
 
-	public void setLastEmperor(Characters lastEmperor) {
-		LastEmperor = lastEmperor;
+	public void setPeriodLastEmperor(Characters periodLastEmperor) {
+		this.periodLastEmperor = periodLastEmperor;
 	}
 
-	public String getReligion() {
-		return Religion;
+	public String getPeriodReligion() {
+		return periodReligion;
 	}
 
-	public void setReligion(String religion) {
-		Religion = religion;
+	public void setPeriodReligion(String periodReligion) {
+		this.periodReligion = periodReligion;
 	}
 
 	public void addPeriod(Periods c) {
@@ -124,6 +108,7 @@ public class Periods implements Serializable{
         periodsList.add(c);
     }
     
+	/*
 	public static void main(String[] args) throws FileNotFoundException, IOException, ParseException
     {
         //JSON parser object to parse read file
@@ -168,25 +153,23 @@ public class Periods implements Serializable{
             	pr.setPeriodName(periodName);
             	pr.setCapital(capital);
             	pr.setFirstEmperor(matchingName(firstEmperor));
-            	
+            		
             	pr.addPeriod(pr);
             }
 
             
             //display();
             for (int i=0; i<Characters.getCharactersList().size();i++) {
-            	System.out.println(Characters.getCharactersList().get(i).getName());
+            	System.out.println(Characters.charactersList.get(i).getName());
             }
             //System.out.printf("index %d\n",matchingName("Đinh Liễn"));
-            //System.out.println(Characters.charactersList.get(4).getName().contains("Đinh Liễn") );
+            //System.out.println(Characters.charactersList.get(4).getName().contains("Dương ") );
            
-    		/*
+    		
             System.out.println("------- (example) Character List -------");
             for (Periods i : periodsList){
-            	System.out.printf("%-20s %-20s %-15s \n",
-						i.getPeriodName(), i.getCapital(), i.getFirstEmperor().replace());
+            	System.out.printf("%-20s %-20s %-15s \n", i.getPeriodName(), i.getCapital(), i.getFirstEmperor().getBornYear());
             }
-            */
-
     }
+    */
 }
