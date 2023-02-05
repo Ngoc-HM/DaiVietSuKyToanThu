@@ -1,9 +1,6 @@
 package com.example.ui_new;
 
-//import com.google.gson.Gson;
-//import com.google.gson.Gson;
 import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
 import com.google.gson.reflect.TypeToken;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -29,8 +26,6 @@ import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
 import com.example.objects.Festival;
-//import com.google.gson.Gson;
-//import com.google.gson.reflect.TypeToken;
 
 public class TraCuuLeHoiData implements Initializable {
     @FXML
