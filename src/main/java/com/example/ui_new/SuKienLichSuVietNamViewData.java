@@ -180,7 +180,6 @@ public class SuKienLichSuVietNamViewData implements Initializable {
                 peopleLabel.setText("Không rõ");
             }
         } catch (IOException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
 

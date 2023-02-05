@@ -188,10 +188,8 @@ public class HuyenSuCacViVuaData implements Initializable {
                 periodLabel.setText("Không rõ");
             }
         } catch (IOException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
-
         ListMusic.setItems(list);
     }
 

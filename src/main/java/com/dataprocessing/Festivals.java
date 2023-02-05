@@ -3,24 +3,15 @@ package com.dataprocessing;
 import java.io.Serializable;
 import java.util.ArrayList;
 
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
-
-import org.json.simple.JSONArray;
-import org.json.simple.JSONObject;
-import org.json.simple.parser.JSONParser;
-import org.json.simple.parser.ParseException;
-
-public class Festivals implements Serializable{
+public class Festivals implements Serializable {
 	int id;
 	String festivalLunarDate;
 	String festivalLocation;
 	String festivalName;
 	Characters festivalRelatedCharacter;
-	
+
 	public static ArrayList<Festivals> festivalsList = new ArrayList<Festivals>();
-	
+
 	public static ArrayList<Festivals> getFestivalsList() {
 		return festivalsList;
 	}
@@ -66,7 +57,7 @@ public class Festivals implements Serializable{
 	}
 
 	public void addFestivals(Festivals c) {
-        c.setId(festivalsList.size());
-        festivalsList.add(c);
-    }
+		c.setId(festivalsList.size());
+		festivalsList.add(c);
+	}
 }

@@ -1,10 +1,8 @@
 package com.example.ui_new;
 
-import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -13,25 +11,18 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
-import javafx.scene.control.ProgressBar;
 import javafx.scene.control.TextField;
-import javafx.scene.input.KeyCode;
-import javafx.scene.input.KeyEvent;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
-import javafx.scene.web.WebEngine;
 import javafx.scene.web.WebView;
 import javafx.stage.Stage;
-
 import java.awt.*;
 import java.io.IOException;
-import java.io.UnsupportedEncodingException;
 import java.net.*;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Paths;
 import java.util.ResourceBundle;
 import java.util.Scanner;
-
 import static com.example.ui_new.HelloApplication.mediaPlayer;
 
 public class WebScreen implements Initializable {
@@ -41,36 +32,42 @@ public class WebScreen implements Initializable {
     public Button Intro;
     @FXML
     public Button tang, giam;
+
     public void tangAction(ActionEvent event) throws IOException {
-        if(HelloApplication.mediaPlayer.getVolume() < 1.0)
+        if (HelloApplication.mediaPlayer.getVolume() < 1.0)
             HelloApplication.mediaPlayer.setVolume(HelloApplication.mediaPlayer.getVolume() + 0.1);
     }
+
     public void giamAction(ActionEvent event) throws IOException {
-        if(HelloApplication.mediaPlayer.getVolume() > 0)
+        if (HelloApplication.mediaPlayer.getVolume() > 0)
             HelloApplication.mediaPlayer.setVolume(HelloApplication.mediaPlayer.getVolume() - 0.1);
     }
 
     ObservableList<String> list = FXCollections.observableArrayList("Kitaro - KOI",
             "Kitaro - Matsuri", "Nhạc baroque không lời ", "Dòng máu lạc hồng", "Giải phóng Miền Nam",
             "Đoàn vệ quốc quân", "Bác đang cùng chúng cháu hành quân", "Hào khí Việt Nam");
-    public void comboBoxOnAction (ActionEvent event){
-        System.out.println( "Nhạc : " + ListMusic.getValue() );
+
+    public void comboBoxOnAction(ActionEvent event) {
+        System.out.println("Nhạc : " + ListMusic.getValue());
         String trunggian = ListMusic.getValue();
         HelloApplication.mediaPlayer.stop();
         switch (trunggian) {
             case "Hát Mãi Khúc Quân Hành" -> {
                 HelloApplication.mediaPlayer.stop();
-                Media media = new Media(Paths.get("src/main/resources/assets/music/HatMaiKhucQuanHanh.mp3").toUri().toString());
+                Media media = new Media(
+                        Paths.get("src/main/resources/assets/music/HatMaiKhucQuanHanh.mp3").toUri().toString());
                 HelloApplication.mediaPlayer = new MediaPlayer(media);
             }
             case "Đoàn vệ quốc quân" -> {
                 HelloApplication.mediaPlayer.stop();
-                Media media = new Media(Paths.get("src/main/resources/assets/music/DoanveQuocQuan.mp3").toUri().toString());
+                Media media = new Media(
+                        Paths.get("src/main/resources/assets/music/DoanveQuocQuan.mp3").toUri().toString());
                 HelloApplication.mediaPlayer = new MediaPlayer(media);
             }
             case "Hào khí Việt Nam" -> {
                 HelloApplication.mediaPlayer.stop();
-                Media media = new Media(Paths.get("src/main/resources/assets/music/HaoKhiVietNam.mp3").toUri().toString());
+                Media media = new Media(
+                        Paths.get("src/main/resources/assets/music/HaoKhiVietNam.mp3").toUri().toString());
                 HelloApplication.mediaPlayer = new MediaPlayer(media);
 
             }
@@ -87,24 +84,28 @@ public class WebScreen implements Initializable {
             }
             case "Nhạc baroque không lời " -> {
                 HelloApplication.mediaPlayer.stop();
-                Media media = new Media(Paths.get("src/main/resources/assets/music/NhacKhongLoi.mp3").toUri().toString());
+                Media media = new Media(
+                        Paths.get("src/main/resources/assets/music/NhacKhongLoi.mp3").toUri().toString());
                 HelloApplication.mediaPlayer = new MediaPlayer(media);
             }
             case "Dòng máu lạc hồng" -> {
 
-                Media media = new Media(Paths.get("src/main/resources/assets/music/DongMauLacHong.mp3").toUri().toString());
+                Media media = new Media(
+                        Paths.get("src/main/resources/assets/music/DongMauLacHong.mp3").toUri().toString());
                 HelloApplication.mediaPlayer = new MediaPlayer(media);
 
             }
             case "Giải phóng Miền Nam" -> {
 
-                Media media = new Media(Paths.get("src/main/resources/assets/music/GiaiPhongMienNam.mp3").toUri().toString());
+                Media media = new Media(
+                        Paths.get("src/main/resources/assets/music/GiaiPhongMienNam.mp3").toUri().toString());
                 HelloApplication.mediaPlayer = new MediaPlayer(media);
 
             }
             case "Bác đang cùng chúng cháu hành quân" -> {
 
-                Media media = new Media(Paths.get("src/main/resources/assets/music/BacDangCungChungChauHanhQuan.mp3").toUri().toString());
+                Media media = new Media(Paths.get("src/main/resources/assets/music/BacDangCungChungChauHanhQuan.mp3")
+                        .toUri().toString());
                 HelloApplication.mediaPlayer = new MediaPlayer(media);
             }
         }
@@ -118,9 +119,12 @@ public class WebScreen implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         ListMusic.setItems(list);
     }
+
     @FXML
-    // Khi nhan nut Trieu đai lich su thì hien thi man hinh tim kiem trieu dai lich su
+    // Khi nhan nut Trieu đai lich su thì hien thi man hinh tim kiem trieu dai lich
+    // su
     public Button TrieuDaiLichSu;
+
     public void TrieuDaiLichSuAction(ActionEvent event) throws IOException {
         try {
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -134,8 +138,10 @@ public class WebScreen implements Initializable {
             e.printStackTrace();
         }
     }
+
     @FXML
-    public Button Introl ;
+    public Button Introl;
+
     public void IntrolAction(ActionEvent event) throws IOException {
         try {
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -149,8 +155,10 @@ public class WebScreen implements Initializable {
             e.printStackTrace();
         }
     }
+
     @FXML
     public Button HuyenSuCacViVua;
+
     public void HuyenSuCacViVuaAction(ActionEvent event) {
         try {
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -163,8 +171,10 @@ public class WebScreen implements Initializable {
             e.printStackTrace();
         }
     }
+
     @FXML
     public Button TraCuuLeHoi;
+
     public void TraCuuLeHoiAction(ActionEvent event) {
         try {
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -177,8 +187,10 @@ public class WebScreen implements Initializable {
             e.printStackTrace();
         }
     }
+
     @FXML
     public Button DiaDiemDiTich;
+
     public void DiaDiemDiTichAction(ActionEvent event) {
         try {
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -192,8 +204,10 @@ public class WebScreen implements Initializable {
         }
         // tạo ra 1 màn hình mới
     }
+
     @FXML
     public Button SuKienLichSuVietNam;
+
     public void SuKienLichSuVietNamAction(ActionEvent event) {
         try {
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -207,11 +221,13 @@ public class WebScreen implements Initializable {
             e.printStackTrace();
         }
     }
+
     public boolean darkModecheck = false;
     @FXML
     public Button DarkMode;
+
     // khi ấn nút DarkMode thì đưa ra màn hình ErrorScreen
-    public void DarkModeAction(ActionEvent event)  throws IOException {
+    public void DarkModeAction(ActionEvent event) throws IOException {
         try {
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
@@ -223,13 +239,13 @@ public class WebScreen implements Initializable {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
 
     }
 
     @FXML
     public Button DenVang;
-    public void DenVangAction(ActionEvent event)  throws IOException {
+
+    public void DenVangAction(ActionEvent event) throws IOException {
         try {
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
@@ -242,6 +258,7 @@ public class WebScreen implements Initializable {
             e.printStackTrace();
         }
     }
+
     // biến tắt nhạc
     @FXML
     public Button TatNhac; // id
@@ -249,10 +266,12 @@ public class WebScreen implements Initializable {
     // on Action
     public void TatNhacAction(ActionEvent event) throws IOException {
         // mở ra màn hình ErrorScreen
-        if(mediaPlayer.getStatus() == MediaPlayer.Status.PLAYING) {
+        if (mediaPlayer.getStatus() == MediaPlayer.Status.PLAYING) {
             mediaPlayer.pause();
-        }else mediaPlayer.play();
+        } else
+            mediaPlayer.play();
     }
+
     @FXML
     public Button NextWeb;
 
@@ -268,25 +287,22 @@ public class WebScreen implements Initializable {
             e.printStackTrace();
         }
     }
+
     @FXML
     public WebView webView;
     @FXML
     public TextField addressBar;
 
-
-
     public void onactionweb(ActionEvent actionEvent) {
-        Scanner scanner = new Scanner(System.in);
-
-        String encodedQuery = URLEncoder.encode(String.valueOf(addressBar.getText()), StandardCharsets.UTF_8);
-
-        if (Desktop.isDesktopSupported() && Desktop.getDesktop().isSupported(Desktop.Action.BROWSE)) {
-            try {
-                Desktop.getDesktop().browse(new URI("https://www.google.com/search?q=" + encodedQuery));
-            } catch (IOException | URISyntaxException e) {
-                e.printStackTrace();
+        try (Scanner scanner = new Scanner(System.in)) {
+            String encodedQuery = URLEncoder.encode(String.valueOf(addressBar.getText()), StandardCharsets.UTF_8);
+            if (Desktop.isDesktopSupported() && Desktop.getDesktop().isSupported(Desktop.Action.BROWSE)) {
+                try {
+                    Desktop.getDesktop().browse(new URI("https://www.google.com/search?q=" + encodedQuery));
+                } catch (IOException | URISyntaxException e) {
+                    e.printStackTrace();
+                }
             }
         }
-
     }
 }
