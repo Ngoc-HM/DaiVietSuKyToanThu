@@ -172,6 +172,8 @@ public class HuyenSuCacViVuaData implements Initializable {
                 }
             if (found) {
                 bornYearLabel.setText(characters.get(i).getBornYear());
+                descriptionLabel.setWrapText(true);
+                descriptionLabel.setMaxWidth(650);
                 descriptionLabel.setText(characters.get(i).getDescription());
                 diedYearLabel.setText(characters.get(i).getDiedYear());
                 locationLabel.setText(characters.get(i).getLocation());
