@@ -8,9 +8,7 @@ module com.example.ui_new {
     requires java.sql;
     requires javafx.web;
     requires com.google.gson;
-
-
-
+    requires java.desktop;
 
 
     opens com.example.ui_new to javafx.fxml;

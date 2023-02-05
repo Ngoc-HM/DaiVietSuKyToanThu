@@ -99,9 +99,9 @@
                   <Button mnemonicParsing="false" prefHeight="34.0" prefWidth="17.0" style="-fx-background-color: #fff;" />
                   <Button mnemonicParsing="false" prefHeight="34.0" prefWidth="63.0" text="Forward" />
                   <Button mnemonicParsing="false" prefHeight="34.0" prefWidth="17.0" style="-fx-background-color: #fff;" />
-                  <TextField fx:id="addressBar" alignment="CENTER" onKeyPressed="#keyHandle" prefHeight="34.0" prefWidth="514.0" promptText="URL..." />
+                  <TextField fx:id="addressBar" alignment="CENTER" prefHeight="34.0" prefWidth="514.0" promptText="URL..." />
                   <Button mnemonicParsing="false" prefHeight="34.0" prefWidth="17.0" style="-fx-background-color: #fff;" />
-                  <Button mnemonicParsing="false" prefHeight="34.0" prefWidth="78.0" text="Zoom In" />
+                  <Button mnemonicParsing="false" onAction="#onactionweb" prefHeight="34.0" prefWidth="78.0" text="Enter" />
                   <Button mnemonicParsing="false" prefHeight="34.0" prefWidth="17.0" style="-fx-background-color: #fff;" />
                   <Button mnemonicParsing="false" prefHeight="34.0" prefWidth="78.0" text="Zoom Out" />
                </children>
