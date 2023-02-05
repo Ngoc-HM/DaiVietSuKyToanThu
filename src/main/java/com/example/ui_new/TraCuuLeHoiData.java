@@ -132,7 +132,6 @@ public class TraCuuLeHoiData implements Initializable {
     }
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        // TODO: read json
         try {
             Reader reader = Files.newBufferedReader(Paths.get("src\\main\\resources\\json\\Festival.json"));
             List<Festival> festivals = new Gson().fromJson(reader, new TypeToken<List<Festival>>() {
@@ -160,7 +159,6 @@ public class TraCuuLeHoiData implements Initializable {
                 figureLabel.setText("Không rõ");
             }
         } catch (IOException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
         // System.out.println(TraCuuLeHoi.findString);

@@ -3,27 +3,18 @@ package com.dataprocessing;
 import java.io.Serializable;
 import java.util.ArrayList;
 
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
-
-import org.json.simple.JSONArray;
-import org.json.simple.JSONObject;
-import org.json.simple.parser.JSONParser;
-import org.json.simple.parser.ParseException;
-
-public class Relics implements Serializable{
+public class Relics implements Serializable {
 	int id;
 	String relicName;
 	String relicDescription;
 	ArrayList<Events> relicEvent;
-	
+
 	public static ArrayList<Relics> relicsList = new ArrayList<Relics>();
-	
+
 	public static ArrayList<Relics> getRelicsList() {
 		return relicsList;
 	}
-	
+
 	public int getId() {
 		return id;
 	}
@@ -57,7 +48,7 @@ public class Relics implements Serializable{
 	}
 
 	public void addRelics(Relics c) {
-        c.setId(relicsList.size());
-        relicsList.add(c);
-    }
+		c.setId(relicsList.size());
+		relicsList.add(c);
+	}
 }

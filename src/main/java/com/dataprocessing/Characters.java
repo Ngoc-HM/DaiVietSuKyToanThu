@@ -3,16 +3,7 @@ package com.dataprocessing;
 import java.io.Serializable;
 import java.util.ArrayList;
 
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
-
-import org.json.simple.JSONArray;
-import org.json.simple.JSONObject;
-import org.json.simple.parser.JSONParser;
-import org.json.simple.parser.ParseException;
-
-public class Characters implements Serializable{
+public class Characters implements Serializable {
 	int id;
 	String characterName;
 	String characterLocation;
@@ -20,9 +11,9 @@ public class Characters implements Serializable{
 	String characterDescription;
 	String characterBornYear;
 	String characterDiedYear;
-	
+
 	public static ArrayList<Characters> charactersList = new ArrayList<Characters>();
-	
+
 	public static ArrayList<Characters> getCharactersList() {
 		return charactersList;
 	}
@@ -35,7 +26,7 @@ public class Characters implements Serializable{
 		this.id = id;
 	}
 
-    public String getCharacterName() {
+	public String getCharacterName() {
 		return characterName;
 	}
 
@@ -84,7 +75,7 @@ public class Characters implements Serializable{
 	}
 
 	public void addCharacter(Characters c) {
-        c.setId(charactersList.size());
-        charactersList.add(c);
-    }
+		c.setId(charactersList.size());
+		charactersList.add(c);
+	}
 }

@@ -25,7 +25,6 @@ import java.io.Reader;
 import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
-import com.example.objects.Festival;
 import com.example.objects.Relic;
 
 public class DiaDiemDiTichData implements Initializable {
@@ -159,6 +158,8 @@ public class DiaDiemDiTichData implements Initializable {
                     }
                 }
             if (found) {
+                contentLabel.setWrapText(true);
+                contentLabel.setMaxWidth(650);
                 contentLabel.setText(relics.get(i).getRelicDescription());
                 nameLabel.setText(relics.get(i).getRelicName());
                 String[] tmp = relics.get(i).getRelatedEvent();
@@ -173,7 +174,6 @@ public class DiaDiemDiTichData implements Initializable {
                 eventLabel.setText("Không rõ");
             }
         } catch (IOException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
 

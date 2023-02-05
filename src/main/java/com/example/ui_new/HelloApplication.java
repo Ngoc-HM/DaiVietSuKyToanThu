@@ -2,7 +2,6 @@ package com.example.ui_new;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
@@ -10,7 +9,6 @@ import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import java.io.IOException;
 import java.nio.file.Paths;
-import org.json.simple.parser.*;
 
 public class HelloApplication extends Application {
     public static MediaPlayer mediaPlayer;
