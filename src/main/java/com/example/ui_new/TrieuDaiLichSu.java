@@ -25,6 +25,8 @@ public class TrieuDaiLichSu implements Initializable {
     public ComboBox<String> ListMusic;
     @FXML
     public Button Introl ;
+    public Button Intro;
+
     public void IntrolAction(ActionEvent event) throws IOException {
         try {
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();

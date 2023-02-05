@@ -29,7 +29,7 @@ public class HelloController implements Initializable {
     @FXML
     public Button Intro;
     @FXML
-            public Button tang, giam;
+    public Button tang, giam;
     public void tangAction(ActionEvent event) throws IOException {
         if(HelloApplication.mediaPlayer.getVolume() < 1.0)
             HelloApplication.mediaPlayer.setVolume(HelloApplication.mediaPlayer.getVolume() + 0.1);
@@ -38,7 +38,6 @@ public class HelloController implements Initializable {
         if(HelloApplication.mediaPlayer.getVolume() > 0)
             HelloApplication.mediaPlayer.setVolume(HelloApplication.mediaPlayer.getVolume() - 0.1);
     }
-
 
     ObservableList<String> list = FXCollections.observableArrayList("Kitaro - KOI",
             "Kitaro - Matsuri", "Nhạc baroque không lời ", "Dòng máu lạc hồng", "Giải phóng Miền Nam",

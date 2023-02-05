@@ -23,10 +23,10 @@
                   </ImageView>
                </children>
             </AnchorPane>
-            <ComboBox fx:id="ListMusic" onAction="#comboBoxOnAction" prefHeight="34.0" prefWidth="227.0" promptText="Hào Khí Việt Nam" />
+            <ComboBox fx:id="ListMusic" onAction="#comboBoxOnAction" prefHeight="34.0" prefWidth="227.0" promptText="Chọn nhạc..." />
             <HBox prefHeight="49.0" prefWidth="227.0">
                <children>
-                  <Button fx:id="TatNhac" mnemonicParsing="false" onAction="#TatNhacAction" prefHeight="49.0" prefWidth="149.0" text="Tắt/Bật Nhạc" />
+                  <Button fx:id="TatNhac" mnemonicParsing="false" onAction="#TatNhacAction" prefHeight="56.0" prefWidth="138.0" text="Tắt/Bật Nhạc" />
                   <VBox prefHeight="200.0" prefWidth="100.0">
                      <children>
                         <HBox prefHeight="100.0" prefWidth="200.0">
@@ -39,9 +39,9 @@
                               </ImageView>
                            </children>
                         </HBox>
-                        <HBox prefHeight="100.0" prefWidth="200.0">
+                        <HBox prefHeight="0.0" prefWidth="89.0">
                            <children>
-                              <Button fx:id="giam" mnemonicParsing="false" onAction="#giamAction" prefHeight="25.0" prefWidth="77.0" text="Giảm" />
+                              <Button fx:id="giam" mnemonicParsing="false" onAction="#giamAction" prefHeight="26.0" prefWidth="75.0" text="Giảm" />
                               <ImageView fitHeight="25.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@../../../assets/image/amluongmin.png" />

@@ -26,7 +26,7 @@
                   </ImageView>
                </children>
             </AnchorPane>
-            <ComboBox fx:id="ListMusic" onAction="#comboBoxOnAction" prefHeight="34.0" prefWidth="227.0" promptText="Hào Khí Việt Nam" />
+            <ComboBox fx:id="ListMusic" onAction="#comboBoxOnAction" prefHeight="34.0" prefWidth="227.0" promptText="Chọn nhạc..." />
             <Button fx:id="TatNhac" mnemonicParsing="false" onAction="#TatNhacAction" prefHeight="46.0" prefWidth="227.0" text="Tắt/Bật Nhạc" />
             <HBox prefHeight="47.0" prefWidth="227.0">
                <children>

@@ -56,11 +56,11 @@
         <artifactId>javafx-fxml</artifactId>
         <version>17</version>
     </dependency>
- <dependency>
-    <groupId>org.openjfx</groupId>
-    <artifactId>javafx-web</artifactId>
-    <version>19</version>
-</dependency>
+    <dependency>
+        <groupId>org.openjfx</groupId>
+        <artifactId>javafx-web</artifactId>
+        <version>19</version>
+    </dependency>
 
     <dependency>
         <groupId>org.junit.jupiter</groupId>
