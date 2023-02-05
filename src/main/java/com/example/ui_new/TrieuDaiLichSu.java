@@ -264,7 +264,7 @@ public class TrieuDaiLichSu implements Initializable {
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("hello-view.fxml"));
             Parent root1 = (Parent) fxmlLoader.load();
-            stage.setTitle("Hello");
+            stage.setTitle("Triều Đại Lịch Sử");
             stage.setScene(new Scene(root1));
             stage.show();
         } catch (Exception e) {
@@ -279,9 +279,9 @@ public class TrieuDaiLichSu implements Initializable {
     public void TimKiemAction(ActionEvent event) throws IOException {
         try {
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("TraCuuLeHoiData.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("TrieuDaiLichSuData.fxml"));
             Parent root1 = (Parent) fxmlLoader.load();
-            stage.setTitle("Hello");
+            stage.setTitle("Triều Đại Lịch Sử");
             stage.setScene(new Scene(root1));
             stage.show();
         } catch (Exception e) {

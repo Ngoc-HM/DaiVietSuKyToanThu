@@ -262,7 +262,7 @@ public class SuKienLichSuVietNamViewData implements Initializable {
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("SuKienLichSuVietNamView.fxml"));
             Parent root1 = (Parent) fxmlLoader.load();
-            stage.setTitle("Hello");
+            stage.setTitle("Sự Kiện Lịch Sử Việt Nam");
             stage.setScene(new Scene(root1));
             stage.show();
         } catch (Exception e) {

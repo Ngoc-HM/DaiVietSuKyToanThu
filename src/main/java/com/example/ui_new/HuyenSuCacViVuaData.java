@@ -262,7 +262,7 @@ public class HuyenSuCacViVuaData implements Initializable {
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("HuyenSuCacViVua.fxml"));
             Parent root1 = (Parent) fxmlLoader.load();
-            stage.setTitle("Hello");
+            stage.setTitle("Huyền Sử Các Vị Vua");
             stage.setScene(new Scene(root1));
             stage.show();
         } catch (Exception e) {

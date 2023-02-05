@@ -327,7 +327,7 @@ public class TraCuuLeHoiData implements Initializable {
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("TraCuuLeHoi.fxml"));
             Parent root1 = (Parent) fxmlLoader.load();
-            stage.setTitle("Hello");
+            stage.setTitle("Tra Cứu Lễ Hội");
             stage.setScene(new Scene(root1));
             stage.show();
         } catch (Exception e) {

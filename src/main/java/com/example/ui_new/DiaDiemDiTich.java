@@ -262,7 +262,7 @@ public class DiaDiemDiTich implements Initializable {
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("hello-view.fxml"));
             Parent root1 = (Parent) fxmlLoader.load();
-            stage.setTitle("Hello");
+            stage.setTitle("Địa Điểm Di Tích");
             stage.setScene(new Scene(root1));
             stage.show();
         } catch (Exception e) {
@@ -279,7 +279,7 @@ public class DiaDiemDiTich implements Initializable {
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("HuyenSuCacViVuaData.fxml"));
             Parent root1 = (Parent) fxmlLoader.load();
-            stage.setTitle("Hello");
+            stage.setTitle("Địa Điểm Di Tích");
             stage.setScene(new Scene(root1));
             stage.show();
         } catch (Exception e) {
