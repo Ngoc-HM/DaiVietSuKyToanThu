@@ -131,7 +131,7 @@ public class HelloController implements Initializable {
 
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("hello-view.fxml"));
             Parent root1 = (Parent) fxmlLoader.load();
-            stage.setTitle("Giới thiệu");
+            stage.setTitle("Đại Việt Sử Ký Toàn Thư - Project Lập Trình Hướng Đối Tượng !");
             stage.setScene(new Scene(root1));
             stage.show();
         } catch (Exception e) {
