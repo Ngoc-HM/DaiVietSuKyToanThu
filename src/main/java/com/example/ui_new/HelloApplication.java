@@ -12,6 +12,7 @@ import java.nio.file.Paths;
 
 public class HelloApplication extends Application {
     public static MediaPlayer mediaPlayer;
+    public static String findString="";
     public static Scene scene;
     public static Stage stage;
 

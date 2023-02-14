@@ -30,34 +30,24 @@ import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
 public class TrieuDaiLichSuData implements Initializable {
-
     @FXML
     private Label CapitalLabel;
-
     @FXML
     private Label FirstEmperorLabel;
-
     @FXML
     private Button Intro;
-
     @FXML
     private Label LastEmperorLabel;
-
     @FXML
     private Label PeriodNameLabel;
-
     @FXML
     private Label PeriodPredecessorLabel;
-
     @FXML
     private Label PeriodSuccessorLabel;
-
     @FXML
     private Label PeriodTimeLabel;
-
     @FXML
     private Label ReligionLabel;
-
     @FXML
     public ComboBox<String> ListMusic;
     @FXML
@@ -170,10 +160,10 @@ public class TrieuDaiLichSuData implements Initializable {
             }.getType());
             int i = 0;
             boolean found = false;
-            if (!TrieuDaiLichSu.searchString.equals(""))
+            if (!HelloApplication.findString.equals(""))
                 for (; i < periods.size(); i++) {
                     String name = periods.get(i).getPeriodName().toUpperCase();
-                    if (name.contains(TrieuDaiLichSu.searchString)) {
+                    if (name.contains(HelloApplication.findString)) {
                         found = true;
                         break;
                     }

@@ -31,22 +31,16 @@ import com.example.objects.Character;
 public class HuyenSuCacViVuaData implements Initializable {
     @FXML
     private Button Intro;
-
     @FXML
     private Label bornYearLabel;
-
     @FXML
     private Label descriptionLabel;
-
     @FXML
     private Label diedYearLabel;
-
     @FXML
     private Label locationLabel;
-
     @FXML
     private Label nameLabel;
-
     @FXML
     private Label periodLabel;
     @FXML
@@ -57,7 +51,6 @@ public class HuyenSuCacViVuaData implements Initializable {
     public void IntrolAction(ActionEvent event) throws IOException {
         try {
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("hello-view.fxml"));
             Parent root1 = (Parent) fxmlLoader.load();
             stage.setTitle("Giới thiệu");
@@ -159,13 +152,12 @@ public class HuyenSuCacViVuaData implements Initializable {
             Reader reader = Files.newBufferedReader(Paths.get("src\\main\\resources\\json\\Character.json"));
             List<Character> characters = new Gson().fromJson(reader, new TypeToken<List<Character>>() {
             }.getType());
-            // festivals.forEach(tmp -> System.out.println(tmp.getFestivalName()));
             int i = 0;
             boolean found = false;
-            if (!HuyenSuCacViVua.searchString.equals(""))
+            if (!HelloApplication.findString.equals(""))
                 for (; i < characters.size(); i++) {
                     String name = characters.get(i).getName().toUpperCase();
-                    if (name.contains(HuyenSuCacViVua.searchString)) {
+                    if (name.contains(HelloApplication.findString)) {
                         found = true;
                         break;
                     }
@@ -201,7 +193,6 @@ public class HuyenSuCacViVuaData implements Initializable {
     public void TrieuDaiLichSuAction(ActionEvent event) throws IOException {
         try {
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("TrieuDaiLichSu.fxml"));
             Parent root1 = (Parent) fxmlLoader.load();
             stage.setTitle("Triều Đại Lịch Sử");
@@ -267,7 +258,6 @@ public class HuyenSuCacViVuaData implements Initializable {
     public void SuKienLichSuVietNamAction(ActionEvent event) {
         try {
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("SuKienLichSuVietNamView.fxml"));
             Parent root1 = (Parent) fxmlLoader.load();
             stage.setTitle("Sự kiện lịch sử Việt Nam");
@@ -285,7 +275,6 @@ public class HuyenSuCacViVuaData implements Initializable {
     public void DarkModeAction(ActionEvent event) throws IOException {
         try {
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("ErrorScreen.fxml"));
             Parent root1 = (Parent) fxmlLoader.load();
             stage.setTitle("Error");
@@ -302,7 +291,6 @@ public class HuyenSuCacViVuaData implements Initializable {
     public void DenVangAction(ActionEvent event) throws IOException {
         try {
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("ErrorScreen.fxml"));
             Parent root1 = (Parent) fxmlLoader.load();
             stage.setTitle("Error");

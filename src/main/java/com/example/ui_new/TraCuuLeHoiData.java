@@ -139,10 +139,10 @@ public class TraCuuLeHoiData implements Initializable {
             // festivals.forEach(tmp -> System.out.println(tmp.getFestivalName()));
             int i = 0;
             boolean found = false;
-            if (!TraCuuLeHoi.findString.equals(""))
+            if (!HelloApplication.findString.equals(""))
                 for (; i < festivals.size(); i++) {
                     String name = festivals.get(i).getFestivalName().toUpperCase();
-                    if (name.contains(TraCuuLeHoi.findString)) {
+                    if (name.contains(HelloApplication.findString)) {
                         found = true;
                         break;
                     }

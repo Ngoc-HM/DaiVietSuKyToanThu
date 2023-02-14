@@ -24,13 +24,10 @@ import com.example.objects.SuKien;
 public class SuKienLichSuVietNamViewData extends HelloController {
     @FXML
     private Label contentLabel;
-
     @FXML
     private Label locationLabel;
-
     @FXML
     private Label nameLabel;
-
     @FXML
     private Label peopleLabel;
     @FXML
@@ -45,10 +42,10 @@ public class SuKienLichSuVietNamViewData extends HelloController {
             // festivals.forEach(tmp -> System.out.println(tmp.getFestivalName()));
             int i = 0;
             boolean found = false;
-            if (!SukienLichSuVietNamView.findString.equals(""))
+            if (!HelloApplication.findString.equals(""))
                 for (; i < events.size(); i++) {
                     String name = events.get(i).getName().toUpperCase();
-                    if (name.contains(SukienLichSuVietNamView.findString)) {
+                    if (name.contains(HelloApplication.findString)) {
                         found = true;
                         break;
                     }

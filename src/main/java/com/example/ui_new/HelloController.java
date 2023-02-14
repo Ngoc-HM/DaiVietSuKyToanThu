@@ -14,7 +14,6 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.stage.Stage;
-
 import java.io.IOException;
 import java.net.URL;
 import java.nio.file.Paths;
@@ -113,7 +112,6 @@ public class HelloController implements Initializable {
     public void TrieuDaiLichSuAction(ActionEvent event) throws IOException {
         try {
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("TrieuDaiLichSu.fxml"));
             Parent root1 = (Parent) fxmlLoader.load();
             stage.setTitle("Triều Đại Lịch Sử");
@@ -128,7 +126,6 @@ public class HelloController implements Initializable {
     public void IntrolAction(ActionEvent event) throws IOException {
         try {
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("hello-view.fxml"));
             Parent root1 = (Parent) fxmlLoader.load();
             stage.setTitle("Đại Việt Sử Ký Toàn Thư - Project Lập Trình Hướng Đối Tượng !");
@@ -186,7 +183,6 @@ public class HelloController implements Initializable {
     public void SuKienLichSuVietNamAction(ActionEvent event) {
         try {
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("SuKienLichSuVietNamView.fxml"));
             Parent root1 = (Parent) fxmlLoader.load();
             stage.setTitle("Sự kiện lịch sử Việt Nam");
@@ -203,7 +199,6 @@ public class HelloController implements Initializable {
     public void DarkModeAction(ActionEvent event)  throws IOException {
         try {
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("ErrorScreen.fxml"));
             Parent root1 = (Parent) fxmlLoader.load();
             stage.setTitle("Error");
@@ -221,7 +216,6 @@ public class HelloController implements Initializable {
     public void DenVangAction(ActionEvent event)  throws IOException {
         try {
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("ErrorScreen.fxml"));
             Parent root1 = (Parent) fxmlLoader.load();
             stage.setTitle("Error");

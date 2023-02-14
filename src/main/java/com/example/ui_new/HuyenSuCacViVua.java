@@ -13,12 +13,10 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class HuyenSuCacViVua extends HelloController {
-    public static String searchString = "";
     @FXML
     public ComboBox<String> ListMusic;
     @FXML
     public Button Introl;
-
     @FXML
     public Button GoBack;
 
@@ -42,7 +40,7 @@ public class HuyenSuCacViVua extends HelloController {
 
     public void TimKiemAction(ActionEvent event) throws IOException {
         try {
-            searchString = Search.getText().toUpperCase().trim();
+            HelloApplication.findString = Search.getText().toUpperCase().trim();
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("HuyenSuCacViVuaData.fxml"));
             Parent root1 = (Parent) fxmlLoader.load();

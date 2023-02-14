@@ -30,10 +30,8 @@ import com.example.objects.Relic;
 public class DiaDiemDiTichData implements Initializable {
     @FXML
     private Label contentLabel;
-
     @FXML
     private Label eventLabel;
-
     @FXML
     private Label nameLabel;
     @FXML
@@ -149,10 +147,10 @@ public class DiaDiemDiTichData implements Initializable {
             // festivals.forEach(tmp -> System.out.println(tmp.getFestivalName()));
             int i = 0;
             boolean found = false;
-            if (!DiaDiemDiTich.findString.equals(""))
+            if (!HelloApplication.findString.equals(""))
                 for (; i < relics.size(); i++) {
                     String name = relics.get(i).getRelicName().toUpperCase();
-                    if (name.contains(DiaDiemDiTich.findString)) {
+                    if (name.contains(HelloApplication.findString)) {
                         found = true;
                         break;
                     }
