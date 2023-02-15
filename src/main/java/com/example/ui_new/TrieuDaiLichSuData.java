@@ -155,7 +155,7 @@ public class TrieuDaiLichSuData implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         try {
-            Reader reader = Files.newBufferedReader(Paths.get("src\\main\\resources\\json\\Period_fix.json"));
+            Reader reader = Files.newBufferedReader(Paths.get("src\\main\\resources\\json\\Period.json"));
             List<TrieuDai> periods = new Gson().fromJson(reader, new TypeToken<List<TrieuDai>>() {
             }.getType());
             int i = 0;
