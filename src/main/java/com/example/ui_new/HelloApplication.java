@@ -11,6 +11,7 @@ import java.io.IOException;
 import java.nio.file.Paths;
 
 public class HelloApplication extends Application {
+	public static HelloController helloController;
     public static MediaPlayer mediaPlayer;
     public static String findString="";
     public static Scene scene;
@@ -21,10 +22,11 @@ public class HelloApplication extends Application {
         Media media = new Media(Paths.get("src/main/resources/assets/music/HaoKhiVietNam.mp3").toUri().toString());
         mediaPlayer = new MediaPlayer(media);
         // Phát nhạc hào khí Việt Nam
-        mediaPlayer.setMute(false);
+        mediaPlayer.setMute(true);
         mediaPlayer.play();
         mediaPlayer.setCycleCount(MediaPlayer.INDEFINITE);
         mediaPlayer.setAutoPlay(true);
+        
         // chạy cửa sổ menu
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load());

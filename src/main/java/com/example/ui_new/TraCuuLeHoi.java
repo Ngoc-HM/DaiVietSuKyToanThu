@@ -7,32 +7,15 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import java.io.IOException;
 
 public class TraCuuLeHoi extends HelloController {
     @FXML
-    public ComboBox<String> ListMusic;
-    @FXML
-    public Button Introl;
-    @FXML
-    public Button TraCuuLeHoi;
-    @FXML
     public Button GoBack;
-
     public void GoBackAction(ActionEvent event) throws IOException {
-        try {
-            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("hello-view.fxml"));
-            Parent root1 = (Parent) fxmlLoader.load();
-            stage.setTitle("Đại Việt Sử Ký Toàn Thư - Project Lập Trình Hướng Đối Tượng !");
-            stage.setScene(new Scene(root1));
-            stage.show();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        super.IntrolAction(event);
     }
 
     @FXML
@@ -53,5 +36,4 @@ public class TraCuuLeHoi extends HelloController {
             e.printStackTrace();
         }
     }
-
 }

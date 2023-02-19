@@ -22,6 +22,7 @@ import java.util.ResourceBundle;
 import static com.example.ui_new.HelloApplication.mediaPlayer;
 
 public class HelloController implements Initializable {
+
     @FXML
     public ComboBox<String> ListMusic;
     @FXML
@@ -109,9 +110,12 @@ public class HelloController implements Initializable {
     @FXML
     // Khi nhan nut Trieu đai lich su thì hien thi man hinh tim kiem trieu dai lich su
     public Button TrieuDaiLichSu;
+    @FXML
     public void TrieuDaiLichSuAction(ActionEvent event) throws IOException {
         try {
-            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        	Node node = (Node) event.getSource();
+            Stage stage = (Stage) node.getScene().getWindow();
+        	
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("TrieuDaiLichSu.fxml"));
             Parent root1 = (Parent) fxmlLoader.load();
             stage.setTitle("Triều Đại Lịch Sử");
@@ -207,8 +211,6 @@ public class HelloController implements Initializable {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
-
     }
 
     @FXML
@@ -238,7 +240,6 @@ public class HelloController implements Initializable {
     }
     @FXML
     public Button NextWeb;
-
     public void NextWebAction(ActionEvent event) throws IOException {
         try {
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();

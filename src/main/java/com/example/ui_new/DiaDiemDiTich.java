@@ -14,18 +14,8 @@ import java.io.IOException;
 public class DiaDiemDiTich extends HelloController {
     @FXML
     public Button GoBack;
-
     public void GoBackAction(ActionEvent event) throws IOException {
-        try {
-            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("hello-view.fxml"));
-            Parent root1 = (Parent) fxmlLoader.load();
-            stage.setTitle("Đại Việt Sử Ký Toàn Thư - Project Lập Trình Hướng Đối Tượng !");
-            stage.setScene(new Scene(root1));
-            stage.show();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        super.IntrolAction(event);
     }
 
     @FXML
