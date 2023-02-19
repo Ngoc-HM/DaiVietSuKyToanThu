@@ -4,14 +4,8 @@ import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
-import javafx.stage.Stage;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.io.IOException;
@@ -30,8 +24,7 @@ public class SuKienLichSuVietNamViewData extends HelloController {
     private Label nameLabel;
     @FXML
     private Label peopleLabel;
-    @FXML
-    public ComboBox<String> ListMusic;
+
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -80,18 +73,8 @@ public class SuKienLichSuVietNamViewData extends HelloController {
 
     @FXML
     public Button GoBack;
-
     public void GoBackAction(ActionEvent event) throws IOException {
-        try {
-            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("SuKienLichSuVietNamView.fxml"));
-            Parent root1 = (Parent) fxmlLoader.load();
-            stage.setTitle("Sự Kiện Lịch Sử Việt Nam");
-            stage.setScene(new Scene(root1));
-            stage.show();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        super.SuKienLichSuVietNamAction(event);
     }
 
 }
